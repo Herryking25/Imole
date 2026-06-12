@@ -115,10 +115,10 @@ export default function FeedbackScreen() {
                 <X className="w-8 h-8 stroke-[3]" />
               </div>
               <h2 className="text-3xl font-black text-slate-800 tracking-tight font-display">
-                Good Try!
+                {t('incorrect_title')}
               </h2>
               <p className="text-sm text-slate-500 font-semibold mt-1">
-                You will get it next time, don't give up!
+                {t('incorrect_subtitle')}
               </p>
             </>
           )}
