@@ -152,7 +152,7 @@ export default function Onboarding() {
         {/* Step 1: Mascot & Name Input */}
         {step === 1 && (
           <div className="w-full flex flex-col items-center gap-6 animate-fade-in">
-            <ImoleMascot expression="happy" size={120} />
+            <ImoleMascot variant="logo" size={120} />
             
             <div className="text-center">
               <h2 className="text-2xl font-black text-slate-800 font-display">{tOnboard('title')}</h2>
@@ -179,7 +179,7 @@ export default function Onboarding() {
         {/* Step 2: Mascot & Age Picker Grid */}
         {step === 2 && (
           <div className="w-full flex flex-col items-center gap-6 animate-fade-in">
-            <ImoleMascot expression="thinking" size={110} />
+            <ImoleMascot variant="logo" size={110} />
             
             <div className="text-center">
               <h2 className="text-2xl font-black text-slate-800 font-display">{tOnboard('ageLabel')}</h2>
@@ -207,7 +207,7 @@ export default function Onboarding() {
         {/* Step 3: Mascot & Language Flags Selector */}
         {step === 3 && (
           <div className="w-full flex flex-col items-center gap-6 animate-fade-in">
-            <ImoleMascot expression="excited" size={110} />
+            <ImoleMascot variant="logo" size={110} />
             
             <div className="text-center">
               <h2 className="text-2xl font-black text-slate-800 font-display">{tOnboard('langLabel')}</h2>

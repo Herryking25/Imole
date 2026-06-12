@@ -6,6 +6,9 @@ import { StorageService, getLocalDateString, type Streak, type Scores, type Sess
 import challengesData from '../data/challenges.json'
 import ImoleMascot from '../components/ImoleMascot'
 
+type SkillKey = 'mentalMath' | 'speaking' | 'finance' | 'creativity' | 'emotionalIQ'
+type Challenge = (typeof challengesData)[number]
+
 export default function Dashboard() {
   const { profile } = useProfile()
   const { t, language } = useLanguage()
@@ -32,6 +35,23 @@ export default function Dashboard() {
   const todayChallenge = challengesData[dayOfYear % challengesData.length]
   const skillTranslationKey = `skills.${todayChallenge.skill}`
   const challengeTitle = t(skillTranslationKey)
+  const completedChallengeIds = new Set(
+    StorageService.getSessions().map((session) => session.challengeId)
+  )
+  const skillOrder: SkillKey[] = ['mentalMath', 'speaking', 'finance', 'creativity', 'emotionalIQ']
+  const challengeTracks = skillOrder.map((skill) => {
+    const challenges = challengesData.filter((item) => item.skill === skill)
+    const completed = challenges.filter((item) => completedChallengeIds.has(item.id)).length
+    const nextChallenge = challenges.find((item) => !completedChallengeIds.has(item.id)) || challenges[0]
+
+    return {
+      skill,
+      challenges,
+      completed,
+      nextChallenge,
+      isComplete: completed >= challenges.length
+    }
+  })
 
   // Localized greetings
   const getGreeting = () => {
@@ -94,6 +114,10 @@ export default function Dashboard() {
 
   const handleStartChallenge = () => {
     navigate('/challenge', { state: { challenge: todayChallenge } })
+  }
+
+  const handleStartSkillChallenge = (challenge: Challenge) => {
+    navigate('/challenge', { state: { challenge } })
   }
 
   const getDifficultyStars = (difficulty: number) => {
@@ -221,6 +245,62 @@ export default function Dashboard() {
             </button>
           </div>
         )}
+      </div>
+
+      {/* 5. Practice Tracks */}
+      <div className="flex flex-col gap-3">
+        <div className="flex items-end justify-between px-1">
+          <div>
+            <h3 className="text-lg font-black text-slate-800 font-display uppercase tracking-wide">
+              Skill Practice
+            </h3>
+            <p className="text-xs font-semibold text-slate-400">
+              Complete all 30 challenges to unlock every certificate
+            </p>
+          </div>
+        </div>
+
+        <div className="grid gap-3 md:grid-cols-2">
+          {challengeTracks.map((track) => {
+            const progressPercent = Math.round((track.completed / track.challenges.length) * 100)
+            const preview = track.nextChallenge.translations[language]?.prompt || track.nextChallenge.translations.en.prompt
+
+            return (
+              <button
+                key={track.skill}
+                type="button"
+                onClick={() => handleStartSkillChallenge(track.nextChallenge)}
+                className="group rounded-3xl border border-slate-100 bg-white p-4 text-left shadow-sm transition hover:border-amber-300 hover:bg-amber-50/30 active-tap"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex flex-col gap-1">
+                    <span className="font-display text-sm font-extrabold text-slate-800">
+                      {t(`skills.${track.skill}`)}
+                    </span>
+                    <span className="line-clamp-2 text-xs font-semibold leading-relaxed text-slate-500">
+                      {track.isComplete ? 'All challenges complete. Tap to replay.' : preview}
+                    </span>
+                  </div>
+
+                  <span className={`shrink-0 rounded-2xl px-2.5 py-1 text-[10px] font-black ${
+                    track.isComplete
+                      ? 'bg-emerald-50 text-emerald-600'
+                      : 'bg-amber-100 text-amber-700'
+                  }`}>
+                    {track.completed}/{track.challenges.length}
+                  </span>
+                </div>
+
+                <div className="mt-3 h-2 overflow-hidden rounded-full bg-slate-100">
+                  <div
+                    className={`h-full rounded-full ${track.isComplete ? 'bg-emerald-500' : 'bg-amber-500'}`}
+                    style={{ width: `${progressPercent}%` }}
+                  />
+                </div>
+              </button>
+            )
+          })}
+        </div>
       </div>
 
       {/* 5. Summary Info Banner */}

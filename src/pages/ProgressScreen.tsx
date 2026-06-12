@@ -5,6 +5,9 @@ import { useLanguage, useProfile } from '../App'
 import { StorageService, type Scores, type Session, type Streak } from '../services/storage'
 import CertificateGenerator from '../components/CertificateGenerator'
 import ShareCardGenerator from '../components/ShareCardGenerator'
+import challengesData from '../data/challenges.json'
+
+type SkillKey = 'mentalMath' | 'speaking' | 'finance' | 'creativity' | 'emotionalIQ'
 
 export default function ProgressScreen() {
   const { t } = useLanguage()
@@ -38,13 +41,14 @@ export default function ProgressScreen() {
     const activeStreak = StorageService.getStreak()
     setStreak(activeStreak)
 
-    // Calculate completions per skill
+    // Calculate unique completions per skill from the implemented challenge set.
+    const completedIds = new Set(activeSessions.map((session) => session.challengeId))
     const counts = {
-      mentalMath: activeSessions.filter(s => s.skillArea === 'mentalMath').length,
-      speaking: activeSessions.filter(s => s.skillArea === 'speaking').length,
-      finance: activeSessions.filter(s => s.skillArea === 'finance').length,
-      creativity: activeSessions.filter(s => s.skillArea === 'creativity').length,
-      emotionalIQ: activeSessions.filter(s => s.skillArea === 'emotionalIQ').length
+      mentalMath: challengesData.filter(item => item.skill === 'mentalMath' && completedIds.has(item.id)).length,
+      speaking: challengesData.filter(item => item.skill === 'speaking' && completedIds.has(item.id)).length,
+      finance: challengesData.filter(item => item.skill === 'finance' && completedIds.has(item.id)).length,
+      creativity: challengesData.filter(item => item.skill === 'creativity' && completedIds.has(item.id)).length,
+      emotionalIQ: challengesData.filter(item => item.skill === 'emotionalIQ' && completedIds.has(item.id)).length
     }
     setCompletions(counts)
   }, [])
@@ -67,8 +71,9 @@ export default function ProgressScreen() {
     { key: 'emotionalIQ', name: t('skills.emotionalIQ'), color: 'bg-rose-500' }
   ]
 
-  const totalPossible = 30
-  const completionPercentage = Math.round((sessions.length / totalPossible) * 100)
+  const totalPossible = challengesData.length
+  const uniqueCompletedCount = new Set(sessions.map((session) => session.challengeId)).size
+  const completionPercentage = Math.round((uniqueCompletedCount / totalPossible) * 100)
 
   // Quick total completions checking
   const hasUnlocks = Object.values(completions).some(val => val >= 6)
@@ -131,7 +136,7 @@ export default function ProgressScreen() {
         {/* Total completed */}
         <div className="bg-white border border-slate-100 rounded-3xl p-4 shadow-sm flex flex-col">
           <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Completed Quests</span>
-          <span className="text-2xl font-black text-slate-800 font-display mt-1">{sessions.length} / {totalPossible}</span>
+          <span className="text-2xl font-black text-slate-800 font-display mt-1">{uniqueCompletedCount} / {totalPossible}</span>
         </div>
 
         {/* Completion rate */}
@@ -155,8 +160,10 @@ export default function ProgressScreen() {
         <div className="flex flex-col gap-3">
           {skillCategories.map((cat) => {
             const count = completions[cat.key as keyof typeof completions] || 0
-            const isUnlocked = count >= 6
-            const progressPercent = Math.min(Math.round((count / 6) * 100), 100)
+            const skillKey = cat.key as SkillKey
+            const totalInCategory = challengesData.filter(item => item.skill === skillKey).length
+            const isUnlocked = count >= totalInCategory
+            const progressPercent = Math.min(Math.round((count / totalInCategory) * 100), 100)
 
             return (
               <div 
@@ -183,7 +190,7 @@ export default function ProgressScreen() {
                       />
                     </div>
                     <span className="text-[10px] font-bold text-slate-400">
-                      {count}/6 challenges
+                      {count}/{totalInCategory} challenges
                     </span>
                   </div>
                 </div>
@@ -191,7 +198,7 @@ export default function ProgressScreen() {
                 {/* Status indicator and action */}
                 {isUnlocked ? (
                   <button
-                    onClick={() => setActiveCert({ key: cat.key, name: cat.name })}
+                    onClick={() => setActiveCert({ key: skillKey, name: cat.name })}
                     className="flex items-center justify-center p-2 rounded-2xl bg-emerald-50 border border-emerald-200 hover:bg-emerald-100 text-emerald-600 transition active-tap shadow-sm"
                     title={t('download_certificate')}
                   >
