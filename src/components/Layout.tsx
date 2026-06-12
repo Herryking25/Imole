@@ -52,8 +52,8 @@ export default function Layout() {
   // If playing a challenge, show full-width centered card
   if (isMinimalLayout) {
     return (
-      <div className="flex flex-col min-h-screen bg-[#FFFDF7] justify-center items-center py-6">
-        <div className="w-full max-w-md bg-white md:shadow-md md:border md:border-slate-100 rounded-3xl min-h-[90vh] flex flex-col justify-between overflow-hidden">
+      <div className="flex flex-col min-h-dvh bg-[#FFFDF7] justify-center items-center py-4 md:py-6">
+        <div className="w-full max-w-md bg-white md:shadow-md md:border md:border-slate-100 rounded-3xl min-h-[calc(100dvh-2rem)] md:min-h-[90vh] flex flex-col justify-between overflow-y-auto">
           <Outlet />
         </div>
       </div>
@@ -61,7 +61,7 @@ export default function Layout() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen relative bg-[#FFFDF7] md:flex-row md:items-stretch">
+    <div className="flex flex-col min-h-dvh relative bg-[#FFFDF7] md:flex-row md:items-stretch">
       
       {/* 1. DESKTOP SIDEBAR (Visible on width >= 768px) */}
       <aside className="hidden md:flex md:flex-col md:justify-between md:w-64 md:border-r md:border-[#F59E0B]/10 md:p-6 md:sticky md:top-0 md:h-screen bg-white">
@@ -174,10 +174,10 @@ export default function Layout() {
       </header>
 
       {/* 3. CONTENT AREA (Scrollable pane) */}
-      <div className="flex-grow flex flex-col md:flex-row md:items-stretch min-h-screen">
+      <div className="flex-grow flex flex-col md:flex-row md:items-stretch min-h-dvh">
         
         {/* Main Content Column */}
-        <main className="flex-grow p-4 md:p-6 md:max-w-2xl">
+        <main className="flex-grow p-4 pb-[calc(6.5rem+env(safe-area-inset-bottom))] md:p-6 md:max-w-2xl">
           <Outlet />
         </main>
 
@@ -225,7 +225,7 @@ export default function Layout() {
       </div>
 
       {/* 5. MOBILE BOTTOM TAB BAR (Hidden on desktop) */}
-      <nav className="md:hidden fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-white border-t border-slate-100 px-6 py-2 flex items-center justify-between shadow-[0_-4px_16px_rgba(0,0,0,0.03)] z-40">
+      <nav className="md:hidden fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-white border-t border-slate-100 px-6 pt-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))] flex items-center justify-between shadow-[0_-4px_16px_rgba(0,0,0,0.03)] z-40">
         {navItems.map((item) => {
           const IconComp = item.icon
           return (
