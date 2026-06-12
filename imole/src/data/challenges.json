@@ -1,0 +1,800 @@
+[
+  {
+    "id": "math_1",
+    "skill": "mentalMath",
+    "difficulty": 1,
+    "responseType": "multipleChoice",
+    "translations": {
+      "en": {
+        "prompt": "You buy Zobo drink for ₦1,200 and Sausage Roll for ₦800. You give the vendor ₦2,000. How much change will you get back?",
+        "options": ["₦0", "₦200", "₦500", "₦1,000"],
+        "correctAnswer": "₦0",
+        "feedbackTip": "Awesome! ₦1,200 + ₦800 is exactly ₦2,000, so you don't get any change back."
+      },
+      "pcm": {
+        "prompt": "You buy Zobo drink ₦1,200 and Sausage Roll ₦800. You give the vendor ₦2,000. How much change you go collect?",
+        "options": ["₦0", "₦200", "₦500", "₦1,000"],
+        "correctAnswer": "₦0",
+        "feedbackTip": "Correct! ₦1,200 plus ₦800 na correct ₦2,000, change no dey at all."
+      },
+      "yo": {
+        "prompt": "O ra mu Zobo fun ₦1,200 ati Sausage Roll fun ₦800. O fun olutaja ni ₦2,000. Elo ni yoo jẹ owó-bàtà (change) rẹ?",
+        "options": ["₦0", "₦200", "₦500", "₦1,000"],
+        "correctAnswer": "₦0",
+        "feedbackTip": "O gbón jú! ₦1,200 pẹlu ₦800 jẹ ₦2,000 gangan, nitorinaa ko si owó-bàtà."
+      }
+    }
+  },
+  {
+    "id": "math_2",
+    "skill": "mentalMath",
+    "difficulty": 2,
+    "responseType": "multipleChoice",
+    "translations": {
+      "en": {
+        "prompt": "Identify the pattern of the Danfo bus times arriving at the bus stop: 8:00 AM, 8:15 AM, 8:30 AM, ... What time is the next bus expected?",
+        "options": ["8:35 AM", "8:40 AM", "8:45 AM", "9:00 AM"],
+        "correctAnswer": "8:45 AM",
+        "feedbackTip": "Great pattern recognition! The buses arrive every 15 minutes."
+      },
+      "pcm": {
+        "prompt": "Look the time when Danfo bus dey reach park: 8:00 AM, 8:15 AM, 8:30 AM, ... Which time the next bus go land?",
+        "options": ["8:35 AM", "8:40 AM", "8:45 AM", "9:00 AM"],
+        "correctAnswer": "8:45 AM",
+        "feedbackTip": "You try well! The bus dey come every 15 minutes."
+      },
+      "yo": {
+        "prompt": "Wo akoko ti bọọsu Danfo n de ibudo: 8:00 AM, 8:15 AM, 8:30 AM, ... Akoko wo ni bọọsu keji yoo de?",
+        "options": ["8:35 AM", "8:40 AM", "8:45 AM", "9:00 AM"],
+        "correctAnswer": "8:45 AM",
+        "feedbackTip": "O tọ́! Bọọsu kọọkan n de ni iṣẹju mẹẹdogun mẹẹdogun (15 mins)."
+      }
+    }
+  },
+  {
+    "id": "math_3",
+    "skill": "mentalMath",
+    "difficulty": 3,
+    "responseType": "multipleChoice",
+    "translations": {
+      "en": {
+        "prompt": "You are traveling from Ikeja to Lekki. The trip takes 45 minutes normally, but Lagos traffic adds an extra 30 minutes. If you leave at 2:00 PM, what time will you arrive?",
+        "options": ["2:45 PM", "3:15 PM", "3:30 PM", "3:45 PM"],
+        "correctAnswer": "3:15 PM",
+        "feedbackTip": "Fantastic! 45 + 30 = 75 minutes (1 hour and 15 minutes). Leaving at 2:00 PM means arriving at 3:15 PM."
+      },
+      "pcm": {
+        "prompt": "You dey go Lekki from Ikeja. The waka na 45 minutes normally, but hold-up add another 30 minutes. If you start go by 2:00 PM, wetin be the time you go reach?",
+        "options": ["2:45 PM", "3:15 PM", "3:30 PM", "3:45 PM"],
+        "correctAnswer": "3:15 PM",
+        "feedbackTip": "Correct! 45 plus 30 na 75 minutes (1 hour and 15 mins). If you start by 2:00 PM, you go reach by 3:15 PM."
+      },
+      "yo": {
+        "prompt": "O n rin irin-ajo lati Ikeja si Lekki. Irin-ajo naa gba iṣẹju 45 nigbagbogbo, ṣugbọn kọmọ-kọmọ (traffic) fi iṣẹju 30 kun. Ti o ba kuro ni agogo meji (2:00 PM), akoko wo ni iwọ yoo de?",
+        "options": ["2:45 PM", "3:15 PM", "3:30 PM", "3:45 PM"],
+        "correctAnswer": "3:15 PM",
+        "feedbackTip": "O wuyi! 45 + 30 jẹ iṣẹju 75 (wakati kan ati iṣẹju 15). Nitorinaa iwọ yoo de ni 3:15 PM."
+      }
+    }
+  },
+  {
+    "id": "math_4",
+    "skill": "mentalMath",
+    "difficulty": 1,
+    "responseType": "multipleChoice",
+    "translations": {
+      "en": {
+        "prompt": "You have a bag containing 36 pieces of chin-chin. You want to share them equally among yourself and 3 friends. How many pieces does each person get?",
+        "options": ["6", "9", "12", "18"],
+        "correctAnswer": "9",
+        "feedbackTip": "Spot on! Sharing among yourself and 3 friends means 4 people in total. 36 ÷ 4 = 9."
+      },
+      "pcm": {
+        "prompt": "You get bag of chin-chin wey get 36 pieces inside. You want share am equal for yourself and 3 of your friends. How many each person go get?",
+        "options": ["6", "9", "12", "18"],
+        "correctAnswer": "9",
+        "feedbackTip": "Correct! You and 3 friends na 4 people. 36 share for 4 na 9 pieces each."
+      },
+      "yo": {
+        "prompt": "O ni apo kan ti o ni awọn ege chin-chin 36. O fẹ pin wọn bakanna laarin iwọ ati awọn ọrẹ 3 rẹ. Ege melo ni eniyan kọọkan yoo gba?",
+        "options": ["6", "9", "12", "18"],
+        "correctAnswer": "9",
+        "feedbackTip": "Pipe! Pinpin laarin iwọ ati awọn ọrẹ 3 tumọ si eniyan 4 lapapọ. 36 ÷ 4 = 9."
+      }
+    }
+  },
+  {
+    "id": "math_5",
+    "skill": "mentalMath",
+    "difficulty": 2,
+    "responseType": "multipleChoice",
+    "translations": {
+      "en": {
+        "prompt": "A market seller stacks oranges in a pyramid: 1 orange at the top, 3 in the middle row, and 6 in the bottom row. If she wants to add a fourth row underneath, following the pattern of triangular numbers (1, 3, 6, ...), how many oranges will be in the new bottom row?",
+        "options": ["8", "10", "12", "15"],
+        "correctAnswer": "10",
+        "feedbackTip": "Brilliant! The differences between the rows are 2, then 3, so the next difference is 4. 6 + 4 = 10 oranges."
+      },
+      "pcm": {
+        "prompt": "Market woman arrange orange like pyramid: 1 orange for top, 3 for middle, 6 for bottom. If she want add another row for ground, and she follow the pattern (1, 3, 6, ...), how many orange go dey the new row?",
+        "options": ["8", "10", "12", "15"],
+        "correctAnswer": "10",
+        "feedbackTip": "Superb! The difference dey add by 1 every time (1+2=3, 3+3=6, 6+4=10). So the answer na 10."
+      },
+      "yo": {
+        "prompt": "Alasọ kan to awọn osan bi jibiti (pyramid): osan 1 ni oke, 3 ni aarin, ati 6 ni isalẹ. Ti o ba fẹ fi ori kẹrin kun isalẹ rẹ gẹgẹbi apẹrẹ (1, 3, 6, ...), osan melo ni yoo wa ni ori tuntun naa?",
+        "options": ["8", "10", "12", "15"],
+        "correctAnswer": "10",
+        "feedbackTip": "Iyanu! Awọn iyatọ laarin awọn ori jẹ 2, lẹhinna 3, nitorinaa iyatọ keji yoo jẹ 4. 6 + 4 = 10 osan."
+      }
+    }
+  },
+  {
+    "id": "math_6",
+    "skill": "mentalMath",
+    "difficulty": 3,
+    "responseType": "multipleChoice",
+    "translations": {
+      "en": {
+        "prompt": "Tobi, Chidi, and Amina each bought a fruit. The fruits are Mango, Banana, and Pawpaw. Tobi did not buy Mango. Chidi bought Pawpaw. What fruit did Tobi buy?",
+        "options": ["Mango", "Banana", "Pawpaw", "Cannot tell"],
+        "correctAnswer": "Banana",
+        "feedbackTip": "Excellent logic! Since Chidi bought Pawpaw, only Mango and Banana are left. Tobi didn't buy Mango, so he must have bought Banana."
+      },
+      "pcm": {
+        "prompt": "Tobi, Chidi, and Amina buy fruit. The fruits na Mango, Banana, and Pawpaw. Tobi no buy Mango. Chidi buy Pawpaw. Which fruit Tobi buy?",
+        "options": ["Mango", "Banana", "Pawpaw", "Nobody know"],
+        "correctAnswer": "Banana",
+        "feedbackTip": "You try well! Since Chidi buy Pawpaw, remaining Mango and Banana. Since Tobi no buy Mango, na Banana he buy."
+      },
+      "yo": {
+        "prompt": "Tobi, Chidi, ati Amina ra eso kọọkan. Awọn eso naa ni Mangoro, Ọpẹbọyìbó (Banana), ati Ibepe (Pawpaw). Tobi ko ra Mangoro. Chidi ra Ibepe. Eso wo ni Tobi ra?",
+        "options": ["Mangoro", "Ọpẹbọyìbó", "Ibepe", "A ko le sọ"],
+        "correctAnswer": "Ọpẹbọyìbó",
+        "feedbackTip": "O gbọ́n gaan! Niwọn bi Chidi ti ra Ibepe, Mangoro ati Ọpẹbọyìbó lo ku. Tobi ko ra Mangoro, nitorinaa o ra Ọpẹbọyìbó."
+      }
+    }
+  },
+  {
+    "id": "speak_1",
+    "skill": "speaking",
+    "difficulty": 1,
+    "responseType": "text",
+    "translations": {
+      "en": {
+        "prompt": "Write down a short speech (2-3 sentences) to convince your parents to let you start a small home garden to grow vegetables.",
+        "feedbackTip": "Speaking tip: Focus on benefits like fresh food, saving money, and showing responsibility!"
+      },
+      "pcm": {
+        "prompt": "Write small talk (2-3 sentences) wey you go use convince your mama and papa make dem allow you start small garden for house to grow vegetable.",
+        "feedbackTip": "Tọk-tọk tip: Tell dem how the garden go help save money and give family clean food!"
+      },
+      "yo": {
+        "prompt": "Kọ ọ̀rọ̀ kúkúrú kan (awọn gbolohun ọrọ 2-3) lati parowa fun awọn obi rẹ lati jẹ ki o bẹrẹ ọgba ile kekere kan lati gbin ẹfọ.",
+        "feedbackTip": "Imọran sọrọ: Tẹnumọ awọn anfani bii jijẹ ounjẹ titun, fifipamọ owo, ati fifihan pe o jẹ ẹni ti o gbẹkẹle!"
+      }
+    }
+  },
+  {
+    "id": "speak_2",
+    "skill": "speaking",
+    "difficulty": 2,
+    "responseType": "text",
+    "translations": {
+      "en": {
+        "prompt": "Your friend wants to skip Saturday environmental sanitation to play football. How would you respectably convince them to clean up first?",
+        "feedbackTip": "Speaking tip: Acknowledge their desire to play, but explain the importance of a clean environment and suggest playing immediately after."
+      },
+      "pcm": {
+        "prompt": "Your friend want run leave Saturday sanitation go play ball. How you go take talk to am soft-soft make he clean up first before ball?",
+        "feedbackTip": "Tọk-tọk tip: Tell am say if place clean, sickness no go dey, and una go fit play ball well after clean-up."
+      },
+      "yo": {
+        "prompt": "Ọrẹ rẹ fẹ fi isọdimímọ agbegbe Satide (environmental sanitation) silẹ lati lọ gba bọọlu. Bawo ni iwọ yoo ṣe rọ̀ wọ́n pẹlu ọ̀wọ̀ lati kọkọ nu agbegbe?",
+        "feedbackTip": "Imọran sọrọ: Gba tiwọn ro pe wọn fẹ gba bọọlu, ṣugbọn ṣalaye pataki imototo ati ki o daba pe ki ẹ gba bọọlu lẹsẹkẹsẹ lẹhinna."
+      }
+    }
+  },
+  {
+    "id": "speak_3",
+    "skill": "speaking",
+    "difficulty": 3,
+    "responseType": "text",
+    "translations": {
+      "en": {
+        "prompt": "Imagine you are standing before your school Headteacher. Pitch a new project: 'Recycling plastic bottles in school.' What are your main points?",
+        "feedbackTip": "Speaking tip: Start with a polite greeting, explain the litter problem, offer the solution (making bins/crafts from bottles), and state the benefit to the school."
+      },
+      "pcm": {
+        "prompt": "Imagine say you dey stand front of your Principal. Pitch new project: 'Make school dey gather plastic bottles.' Wetin be your point?",
+        "feedbackTip": "Tọk-tọk tip: Greet dem well, show dem how bottles dey dirty school, and explain say school fit sell am or recycle am."
+      },
+      "yo": {
+        "prompt": "Foju inu wo pe o duro niwaju Alakoso Ile-iwe rẹ. Sọ ero rẹ fun iṣẹ tuntun kan: 'Gbigba awọn igo ṣiṣu fun atunlo ni ile-iwe.' Kini awọn koko ọrọ rẹ?",
+        "feedbackTip": "Imọran sọrọ: Bẹrẹ pẹlu ikini tọwọtọwọ, ṣalaye iṣoro idoti, daba ojutu naa (pípèsè awọn apoti idoti tabi awọn iṣẹ ọwọ), ati sọ anfani rẹ fun ile-iwe."
+      }
+    }
+  },
+  {
+    "id": "speak_4",
+    "skill": "speaking",
+    "difficulty": 1,
+    "responseType": "text",
+    "translations": {
+      "en": {
+        "prompt": "Your sibling is holding the only mobile phone in the house and refuses to share. Respectfully draft a response to negotiate sharing time.",
+        "feedbackTip": "Speaking tip: Instead of shouting, offer a fair deal like: 'Let's take turns of 30 minutes each, and I will help you with your chore when it's your turn.'"
+      },
+      "pcm": {
+        "prompt": "Your brother/sister hold the only phone for house and he no want share. Draft wetin you go talk to am soft-soft make una share time.",
+        "feedbackTip": "Tọk-tọk tip: No start fight. Propose say: 'Make you use am for 30 minutes, then my turn. I go even help you sweep if you agree.'"
+      },
+      "yo": {
+        "prompt": "Arákùnrin tàbí arábìnrin rẹ di foonu alagbeka kan ṣoṣo ti o wa ninu ile mu ti ko si fẹ lati pin. Kọ ọ̀rọ̀ ti o le sọ lati dunaadura akoko pinpin.",
+        "feedbackTip": "Imọran sọrọ: Dipo ki o kigbe, fun wọn ni adehun to tọ gẹgẹbi: 'Jẹ ki a lo iṣẹju 30 kọọkan, Emi yoo si ran ọ lọwọ ninu iṣẹ rẹ nigbati o ba to akoko rẹ.'"
+      }
+    }
+  },
+  {
+    "id": "speak_5",
+    "skill": "speaking",
+    "difficulty": 2,
+    "responseType": "text",
+    "translations": {
+      "en": {
+        "prompt": "A junior student in your school is being discouraged by peers that 'school is a scam' and reading is useless. How would you encourage them to take studies seriously?",
+        "feedbackTip": "Speaking tip: Use encouraging words, share a personal experience of how reading helped you, and explain how education lights the path to a brighter future."
+      },
+      "pcm": {
+        "prompt": "Junior student for school dey talk say 'school na scam' and to read book na waste of time. Wetin you go tell am make he take he book serious?",
+        "feedbackTip": "Tọk-tọk tip: Speak to am like senior brother. Tell am say education na light wey go make am shine tomorrow."
+      },
+      "yo": {
+        "prompt": "Akwẹkọ kekere kan ni ile-iwe rẹ n gbọ́ lati ọdọ awọn ẹlẹgbẹ rẹ pe 'ile-iwe jẹ ete' (school is a scam) ati pe kika ko wulo. Bawo ni iwọ yoo ṣe gba wọn niyanju lati mu ẹkọ wọn ni pataki?",
+        "feedbackTip": "Imọran sọrọ: Lo awọn ọrọ iwuri, pin iriri ti ara rẹ lori bi kika ṣe ran ọ lọwọ, ki o si ṣalaye bi ẹkọ ṣe jẹ imọlẹ si ọjọ iwaju didara."
+      }
+    }
+  },
+  {
+    "id": "speak_6",
+    "skill": "speaking",
+    "difficulty": 3,
+    "responseType": "text",
+    "translations": {
+      "en": {
+        "prompt": "The local playground is covered in trash. Prepare a 3-sentence speech to convince other children in your neighborhood to join a Saturday clean-up club.",
+        "feedbackTip": "Speaking tip: Make it sound fun! Highlight the danger of playing in trash (injury/sickness) and paint a picture of how beautiful and safe it will be."
+      },
+      "pcm": {
+        "prompt": "The field wey una dey play ball dirty well-well. Prepare 3-sentence talk make other children for area follow you clean am on Saturday.",
+        "feedbackTip": "Tọk-tọk tip: Make the clean-up look like game. Tell dem say if we clean am, hold-up and injury no go block our sweet play."
+      },
+      "yo": {
+        "prompt": "Ibi isere ti adugbo kun fun idoti. Mura ọ̀rọ̀ gbolohun 3 kan lati parowa fun awọn ọmọde miiran ni adugbo rẹ lati darapọ mọ ẹgbẹ isọdimímọ ni Satide.",
+        "feedbackTip": "Imọran sọrọ: Jẹ ki o dun mọni! Sọ nipa ewu idoti (palara/aisan) ati bi ibi naa yoo ṣe lẹwa ti yoo si ni aabo lẹhinna."
+      }
+    }
+  },
+  {
+    "id": "finance_1",
+    "skill": "finance",
+    "difficulty": 1,
+    "responseType": "multipleChoice",
+    "translations": {
+      "en": {
+        "prompt": "Your parents give you ₦5,000 for the week. You spend ₦2,000 on transport and ₦1,500 on textbooks. You want to save the rest. How much can you put in your piggy bank?",
+        "options": ["₦1,000", "₦1,500", "₦2,000", "₦3,500"],
+        "correctAnswer": "₦1,500",
+        "feedbackTip": "Well calculated! ₦5,000 - (₦2,000 + ₦1,500) = ₦1,500. Saving this weekly builds strong habits."
+      },
+      "pcm": {
+        "prompt": "Mama and Papa give you ₦5,000 for the week. You spend ₦2,000 for transport and ₦1,500 for textbooks. You want save the rest. How much you go fit put for your Kolo?",
+        "options": ["₦1,000", "₦1,500", "₦2,000", "₦3,500"],
+        "correctAnswer": "₦1,500",
+        "feedbackTip": "Nice one! ₦5,000 - (₦2,000 + ₦1,500) na ₦1,500. To save money for Kolo na big level."
+      },
+      "yo": {
+        "prompt": "Awọn obi rẹ fun ọ ni ₦5,000 fun ọsẹ naa. O lo ₦2,000 fun gbigbe ati ₦1,500 fun awọn iwe ẹkọ. O fẹ lati ṣafipamọ iyoku. Elo ni o le fi sinu àpótí-ìfowópamọ́ (piggy bank) rẹ?",
+        "options": ["₦1,000", "₦1,500", "₦2,000", "₦3,500"],
+        "correctAnswer": "₦1,500",
+        "feedbackTip": "O ṣe iṣiro naa daradara! ₦5,000 - (₦2,000 + ₦1,500) = ₦1,500. Fifipamọ eyi lọsọọsẹ n kọ ihuwasi to dara."
+      }
+    }
+  },
+  {
+    "id": "finance_2",
+    "skill": "finance",
+    "difficulty": 2,
+    "responseType": "scenario",
+    "translations": {
+      "en": {
+        "prompt": "You want a brand new school bag that costs ₦8,000. You have saved ₦4,000 so far. A toy seller offers you a flashy video game controller for ₦3,500. What is the most financially literate action?",
+        "options": [
+          "Buy the game controller now because you have the cash, and worry about the bag later.",
+          "Keep saving your money until you reach ₦8,000 to buy the essential school bag first.",
+          "Borrow ₦4,000 from a friend to buy both immediately."
+        ],
+        "correctAnswer": "Keep saving your money until you reach ₦8,000 to buy the essential school bag first.",
+        "feedbackTip": "Fantastic decision! Prioritizing needs (school bag) over wants (game controller) is the key to financial growth."
+      },
+      "pcm": {
+        "prompt": "You want buy new school bag wey be ₦8,000. You don save ₦4,000. One person want sell sweet video game controller for ₦3,500. Wetin be the best thing to do?",
+        "options": [
+          "Buy the game controller now because cash dey, then think about school bag later.",
+          "Continue to save the money reach ₦8,000 make you buy the main school bag first.",
+          "Borrow ₦4,000 from friend buy the two once."
+        ],
+        "correctAnswer": "Continue to save the money reach ₦8,000 make you buy the main school bag first.",
+        "feedbackTip": "Correct! Bag for school na 'Need' but game controller na 'Want'. Always buy wetin you need first."
+      },
+      "yo": {
+        "prompt": "O fẹ apo ile-iwe tuntun kan ti o jẹ ₦8,000. O ti ṣafipamọ ₦4,000 titi di isisiyi. Olutaja ohun-iṣere kan fẹ ta bọtini ere fidio kan fun ọ ni ₦3,500. Igbesẹ wo ni o tọ́ julọ?",
+        "options": [
+          "Ra bọtini ere fidio bayi nitori o ni owo lọwọ, ki o si ṣàníyàn nipa apo nigbamii.",
+          "Tẹsiwaju lati ṣafipamọ owo rẹ titi ti o fi to ₦8,000 lati ra apo ile-iwe pataki naa kọkọ.",
+          "Ya ₦4,000 lọwọ ọrẹ rẹ lati ra awọn mejeeji lẹsẹkẹsẹ."
+        ],
+        "correctAnswer": "Tẹsiwaju lati ṣafipamọ owo rẹ titi ti o fi to ₦8,000 lati ra apo ile-iwe pataki naa kọkọ.",
+        "feedbackTip": "Ipinnu nla! Fifun awọn iwulo (apo ile-iwe) ni pataki ju awọn ifẹ (bọtini ere) jẹ bọtini si idagbasoke owo."
+      }
+    }
+  },
+  {
+    "id": "finance_3",
+    "skill": "finance",
+    "difficulty": 3,
+    "responseType": "multipleChoice",
+    "translations": {
+      "en": {
+        "prompt": "You want to buy a reading lamp for ₦6,000. If you save ₦1,500 every week from your chores, how many weeks will it take to afford the lamp?",
+        "options": ["2 weeks", "3 weeks", "4 weeks", "5 weeks"],
+        "correctAnswer": "4 weeks",
+        "feedbackTip": "Awesome! ₦6,000 ÷ ₦1,500 = 4 weeks. Consistency is the secret to reaching your targets."
+      },
+      "pcm": {
+        "prompt": "You want buy reading lamp wey be ₦6,000. If you save ₦1,500 every week from work wey you dey do for house, how many weeks you go take buy the lamp?",
+        "options": ["2 weeks", "3 weeks", "4 weeks", "5 weeks"],
+        "correctAnswer": "4 weeks",
+        "feedbackTip": "You make am! ₦6,000 divide by ₦1,500 na 4 weeks. If you build habit to save, you go fit buy big things later."
+      },
+      "yo": {
+        "prompt": "O fẹ lati ra fitila kika fun ₦6,000. Ti o ba ṣafipamọ ₦1,500 lọsọọsẹ lati awọn iṣẹ ile rẹ, ọsẹ melo ni yoo gba ọ lati ra fitila naa?",
+        "options": ["Ọsẹ 2", "Ọsẹ 3", "Ọsẹ 4", "Ọsẹ 5"],
+        "correctAnswer": "Ọsẹ 4",
+        "feedbackTip": "O tayọ! ₦6,000 ÷ ₦1,500 = ọsẹ 4. Iduroṣinṣin jẹ aṣiri si iyọrisi awọn ibi-afẹde rẹ."
+      }
+    }
+  },
+  {
+    "id": "finance_4",
+    "skill": "finance",
+    "difficulty": 1,
+    "responseType": "scenario",
+    "translations": {
+      "en": {
+        "prompt": "You get a gift of ₦10,000 from an uncle for your birthday. Identify the choice that shows the smartest budget layout:",
+        "options": [
+          "Spend all ₦10,000 celebrating with ice cream and soft drinks with friends.",
+          "Save ₦5,000 in your piggy bank, spend ₦3,000 on school textbooks, and use ₦2,000 for small treats.",
+          "Keep all ₦10,000 under your mattress and refuse to spend any of it, even on school needs."
+        ],
+        "correctAnswer": "Save ₦5,000 in your piggy bank, spend ₦3,000 on school textbooks, and use ₦2,000 for small treats.",
+        "feedbackTip": "Perfect! This is the 50/30/20 rule of budgeting adapted for you: saving half, allocating some for needs (books), and the rest for fun."
+      },
+      "pcm": {
+        "prompt": "Your uncle give you ₦10,000 birthday gift. Which of these budget arrangement make sense pass?",
+        "options": [
+          "Use all the ₦10,000 buy ice cream and mineral for all your friends.",
+          "Save ₦5,000 for Kolo, spend ₦3,000 buy school books, use ₦2,000 enjoy yourself.",
+          "Keep the ₦10,000 under mattress and no spend single Kobo, even if school book dey lack."
+        ],
+        "correctAnswer": "Save ₦5,000 for Kolo, spend ₦3,000 buy school books, use ₦2,000 enjoy yourself.",
+        "feedbackTip": "Excellent! Split money for savings, needs, and enjoyment na the best way to handle finance."
+      },
+      "yo": {
+        "prompt": "O gba ẹbun ti ₦10,000 lọwọ arakunrin kan fun ọjọ ibi rẹ. Yan eto isuna (budget) ti o gbọ́n julọ:",
+        "options": [
+          "Lo gbogbo ₦10,000 lati ra yinyin ati awọn ohun mimu pẹlu awọn ọrẹ.",
+          "Fipamọ ₦5,000 sinu apoti, lo ₦3,000 lori awọn iwe ẹkọ, ki o si lo ₦2,000 fun ere idaraya kekere.",
+          "Tọju gbogbo ₦10,000 labẹ matiresi rẹ ki o kọ lati lo eyikeyi ninu rẹ, paapaa lori awọn iwulo ile-iwe."
+        ],
+        "correctAnswer": "Fipamọ ₦5,000 sinu apoti, lo ₦3,000 lori awọn iwe ẹkọ, ki o si lo ₦2,000 fun ere idaraya kekere.",
+        "feedbackTip": "Pipe! Eyi ni ilana pinpin isuna: fifipamọ idaji, pinpin diẹ fun awọn iwulo (iwe), ati iyoku fun ere."
+      }
+    }
+  },
+  {
+    "id": "finance_5",
+    "skill": "finance",
+    "difficulty": 2,
+    "responseType": "multipleChoice",
+    "translations": {
+      "en": {
+        "prompt": "You decide to make and sell Zobo drink at a Saturday market. It costs you ₦3,000 for ingredients (bottles, zobo leaves, sugar). You make 20 bottles and sell them for ₦250 each. What is your profit?",
+        "options": ["₦1,000", "₦2,000", "₦3,000", "₦5,000"],
+        "correctAnswer": "₦2,000",
+        "feedbackTip": "Splendid business mind! Your total sales are 20 × ₦250 = ₦5,000. Profit is Sales (₦5,000) minus Cost (₦3,000) = ₦2,000."
+      },
+      "pcm": {
+        "prompt": "You want prepare and sell Zobo drink for Saturday market. Material (leaf, sugar, bottle) cost ₦3,000. You make 20 bottles and sell each one for ₦250. How much profit you make?",
+        "options": ["₦1,000", "₦2,000", "₦3,000", "₦5,000"],
+        "correctAnswer": "₦2,000",
+        "feedbackTip": "Business manager! You collect 20 × ₦250 = ₦5,000. Your gain na sales minus cost: ₦5,000 - ₦3,000 = ₦2,000."
+      },
+      "yo": {
+        "prompt": "O pinnu lati ṣe ati ta mimu Zobo ni ọja Satide. O na ọ ni ₦3,000 fun awọn eroja (igo, ewe zobo, suga). O ṣe igo 20 o si ta wọn fun ₦250 kọọkan. Kini ere (profit) rẹ?",
+        "options": ["₦1,000", "₦2,000", "₦3,000", "₦5,000"],
+        "correctAnswer": "₦2,000",
+        "feedbackTip": "Olori oniṣowo gidi! Gbogbo owo titaja rẹ jẹ 20 × ₦250 = ₦5,000. Ere rẹ jẹ Ọja (₦5,000) iyokuro Naa (₦3,000) = ₦2,000."
+      }
+    }
+  },
+  {
+    "id": "finance_6",
+    "skill": "finance",
+    "difficulty": 3,
+    "responseType": "scenario",
+    "translations": {
+      "en": {
+        "prompt": "What is the best way to understand an 'Emergency Fund'?",
+        "options": [
+          "Money set aside for unexpected urgent events like a sudden sickness or broken window.",
+          "A special budget saved to buy birthday cakes and surprise party items.",
+          "Extra pocket money reserved exclusively to download high-speed gaming apps."
+        ],
+        "correctAnswer": "Money set aside for unexpected urgent events like a sudden sickness or broken window.",
+        "feedbackTip": "Brilliant! An emergency fund is a financial safety net that keeps you safe when unexpected bad news or costs happen."
+      },
+      "pcm": {
+        "prompt": "Wetin be the best way to explain 'Emergency Fund'?",
+        "options": [
+          "Money wey you keep for sudden problem like sickness or screen wey break.",
+          "Money wey you save to buy birthday cake and party things.",
+          "Extra money to buy internet data download video games."
+        ],
+        "correctAnswer": "Money wey you keep for sudden problem like sickness or screen wey break.",
+        "feedbackTip": "Correct! Emergency fund dey save head when emergency problem show face suddenly."
+      },
+      "yo": {
+        "prompt": "Kini ọna ti o dara julọ lati ṣalaye 'Owó Ìdáwólé Pàjáwìrì' (Emergency Fund)?",
+        "options": [
+          "Owo ti a tọju fun awọn iṣẹlẹ pajawiri bii aisan airotẹlẹ tabi ferese ile ti o fọ.",
+          "Eto isuna pataki ti a ṣafipamọ lati ra awọn akara ọjọ ibi ati awọn ohun ayẹyẹ.",
+          "Owo apo afikun ti a tọju fun gbigba awọn ere alagbeka ti o gbowolori."
+        ],
+        "correctAnswer": "Owo ti a tọju fun awọn iṣẹlẹ pajawiri bii aisan airotẹlẹ tabi ferese ile ti o fọ.",
+        "feedbackTip": "O tayọ! Owó pàjáwìrì jẹ apata inawo ti o n daabobo ọ nigbati awọn iṣoro airotẹlẹ ba dide."
+      }
+    }
+  },
+  {
+    "id": "create_1",
+    "skill": "creativity",
+    "difficulty": 1,
+    "responseType": "text",
+    "translations": {
+      "en": {
+        "prompt": "Explain how you can make a toy car using a discarded water bottle, plastic bottle caps, and wooden skewers.",
+        "feedbackTip": "Creativity tip: The bottle serves as the chassis, skewers act as axles inserted through holes in the plastic, and caps are the wheels. Great recycling!"
+      },
+      "pcm": {
+        "prompt": "Explain how you go fit make toy motor (car) with empty water bottle, mineral cover, and broom stick or small wood stick.",
+        "feedbackTip": "Ogbon-ororo tip: Use bottle as motor body, stick as axle wey go pass through body, then cover as tire! High level craftsmanship!"
+      },
+      "yo": {
+        "prompt": "Ṣalaye bawo ni o ṣe le ṣe ọkọ ayọkẹlẹ isere kan nipa lilo igo omi ti a sọ nù, awọn ideri igo ṣiṣu, ati awọn igi igbale kekere.",
+        "feedbackTip": "Imọran ẹda: Igo naa yoo jẹ ara ọkọ, awọn igi yoo jẹ ọpa kẹkẹ ti yoo kọja ninu igo, ati awọn ideri yoo jẹ kẹkẹ. Àtúnlò to dara!"
+      }
+    }
+  },
+  {
+    "id": "create_2",
+    "skill": "creativity",
+    "difficulty": 2,
+    "responseType": "text",
+    "translations": {
+      "en": {
+        "prompt": "Write down 3 creative ways to use old newspapers around the house instead of throwing them in the trash.",
+        "feedbackTip": "Creativity tip: Great suggestions! Newspaper can be used for cleaning glass windows, wrapping fragile items, or making paper-mache crafts."
+      },
+      "pcm": {
+        "prompt": "Write 3 way wey you fit take use old newspaper for house instead say you throw am for dustbin.",
+        "feedbackTip": "Ogbon-ororo tip: You fit use newspaper clean window glass make e clean, wrap glass cup, or use am fold things."
+      },
+      "yo": {
+        "prompt": "Kọ awọn ọna ẹda 3 lati lo awọn iwe iroyin atijọ ninu ile dipo sisọ wọn sinu idoti.",
+        "feedbackTip": "Imọran ẹda: Awọn aba to dara! A le lo iwe iroyin lati nu awọn ferese gilasi, lati fi ipari si awọn nkan ẹlẹgẹ, tabi fun iṣẹ ọwọ."
+      }
+    }
+  },
+  {
+    "id": "create_3",
+    "skill": "creativity",
+    "difficulty": 3,
+    "responseType": "text",
+    "translations": {
+      "en": {
+        "prompt": "Power goes out (PHCN/NEPA takes light) at night while you are studying. List 3 resourceful ways to light up your desk using items in your room without a rechargeable torch.",
+        "feedbackTip": "Creativity tip: You can use a phone screen set to maximum brightness reflecting off a water bottle, a candle inside a glass jar, or oil lamps with kitchen supplies."
+      },
+      "pcm": {
+        "prompt": "NEPA/PHCN take light for night when you dey read book. If recharge torch no dey, write 3 ways you fit manage make light show for your book.",
+        "feedbackTip": "Ogbon-ororo tip: You fit put phone screen for maximum make e face water bottle (water go spread light), use candle inside glass jar, or locally made oil lamp."
+      },
+      "yo": {
+        "prompt": "Iná lọ (NEPA gba iná) ni alẹ nigba ti o n kọrin. Ṣe atokọ awọn ọna 3 lati tan imọlẹ tabili rẹ nipa lilo awọn nkan ninu yara rẹ laisi fitila gbigba agbara.",
+        "feedbackTip": "Imọran ẹda: O le lo iboju foonu ti o pọju imọlẹ rẹ ti o tan sori igo omi, abẹ́là ninu pápá gilasi kan, tabi awọn atupa epo abinibi."
+      }
+    }
+  },
+  {
+    "id": "create_4",
+    "skill": "creativity",
+    "difficulty": 1,
+    "responseType": "text",
+    "translations": {
+      "en": {
+        "prompt": "Describe a way to make a simple water filter at home using an empty plastic bottle, clean sand, charcoal, and small stones.",
+        "feedbackTip": "Creativity tip: Cut the bottle upside down, stack stones at the bottom, then charcoal, then sand. Pouring dirty water through filters out solid dirt!"
+      },
+      "pcm": {
+        "prompt": "Describe how you fit arrange sand, charcoal, and stone inside cut-bottle to make simple water filter wey go clear dirty water.",
+        "feedbackTip": "Ogbon-ororo tip: Turn bottle face down, put stone first, follow by charcoal (to clear smell/germs), then sand to filter dirt. Correct science!"
+      },
+      "yo": {
+        "prompt": "Ṣalaye ọna kan lati ṣe idanimọ omi ti o rọrun (water filter) ni ile nipa lilo igo ṣiṣu ofo, iyanrin mimọ, edu (charcoal), ati awọn okuta kekere.",
+        "feedbackTip": "Imọran ẹda: Ge igo naa ni idakeji, to awọn okuta si isalẹ, lẹhinna edu, ati iyanrin. Sisọ omi idoti si i yoo yọ awọn idoti kuro!"
+      }
+    }
+  },
+  {
+    "id": "create_5",
+    "skill": "creativity",
+    "difficulty": 2,
+    "responseType": "text",
+    "translations": {
+      "en": {
+        "prompt": "You share a small bedroom with your siblings and books are scattered everywhere. Suggest a creative shelving solution using cardboard boxes or plastic crates.",
+        "feedbackTip": "Creativity tip: Stack plastic crates sideways and tie them together to form a modular bookcase. Paint cardboard boxes to categorize books by subject!"
+      },
+      "pcm": {
+        "prompt": "You and your brothers/sisters dey stay small room together and book scatter everywhere. Wetin you fit construct with empty carton or crate make room neat?",
+        "feedbackTip": "Ogbon-ororo tip: Stack crates side-by-side tie dem with rope to form bookshelf, or decorate carton make e look neat for books."
+      },
+      "yo": {
+        "prompt": "O pin yara kekere kan pẹlu awọn arakunrin rẹ ati pe awọn iwe wa ni tuka kaakiri. Dabaa ọna ipamọ iwe kan nipa lilo awọn apoti paali tabi awọn apoti ṣiṣu.",
+        "feedbackTip": "Imọran ẹda: To awọn apoti ṣiṣu si ẹgbẹ ki o so wọn pọ lati ṣe apoti iwe. Kun apoti paali lati pin awọn iwe gẹgẹbi koko-ọrọ!"
+      }
+    }
+  },
+  {
+    "id": "create_6",
+    "skill": "creativity",
+    "difficulty": 3,
+    "responseType": "text",
+    "translations": {
+      "en": {
+        "prompt": "Design a fun new board game using only a piece of cardboard, bottle caps as pawns, and seeds from a fruit. What are the basic rules of your game?",
+        "feedbackTip": "Creativity tip: Draw paths on the cardboard, write challenges on special squares, and toss seeds like dice (even seeds = move 2, odd seeds = move 1)."
+      },
+      "pcm": {
+        "prompt": "Design play game with cardboard, mineral cover as pawns, and fruit seed. Write how people go play am.",
+        "feedbackTip": "Ogbon-ororo tip: Draw track lines on card, cover na the player car, throw seed like dice. Safe and very fun to play with family."
+      },
+      "yo": {
+        "prompt": "Ṣe apẹrẹ ere tuntun ti o dun nipa lilo paali kan, awọn ideri igo bi eniyan ere, ati awọn irugbin eso. Kini awọn ofin ipilẹ ti ere rẹ?",
+        "feedbackTip": "Imọran ẹda: Ya awọn ọna sori paali, kọ awọn ipenija lori awọn aye pataki, ki o si ju awọn irugbin bi ere ta (irugbin paapaa = gbe 2, irugbin aitọ = gbe 1)."
+      }
+    }
+  },
+  {
+    "id": "eq_1",
+    "skill": "emotionalIQ",
+    "difficulty": 1,
+    "responseType": "scenario",
+    "translations": {
+      "en": {
+        "prompt": "A classmate laughs loudly at your school drawing, calling it ugly in front of others. What is the most emotionally intelligent reaction?",
+        "options": [
+          "Scream at them, rip up their drawing, and call them names too.",
+          "Take a deep breath, say calmly: 'I like my drawing and art is about expressing myself', then walk away.",
+          "Hide your face, start crying, and throw the drawing in the trash."
+        ],
+        "correctAnswer": "Take a deep breath, say calmly: 'I like my drawing and art is about expressing myself', then walk away.",
+        "feedbackTip": "Excellent maturity! Controlling your anger and setting polite boundaries keeps you in charge of your emotions."
+      },
+      "pcm": {
+        "prompt": "One classmate make mouth for your drawing say e ugly for front of people. Wetin be the best way to handle am?",
+        "options": [
+          "Shout for their head, tear their own drawing, call dem bad names.",
+          "Breath down slow-slow, tell am say: 'I like my drawing, art na how person feel', then walk pass.",
+          "Cover face, start to cry, throw the drawing for dustbin."
+        ],
+        "correctAnswer": "Breath down slow-slow, tell am say: 'I like my drawing, art na how person feel', then walk pass.",
+        "feedbackTip": "Correct! You get self-control. No let other people make you vex. Walk away na power."
+      },
+      "yo": {
+        "prompt": "Ọmọ ile-iwe kan rẹrin si iyaworan rẹ lọpọlọpọ, o pe ni ilara niwaju awọn miiran. Kini iṣesi ti o gbọ́n julọ?",
+        "options": [
+          "Kigbe mọ wọn, fa iyaworan tiwọn ya, ki o si pe wọn ni orukọ buburu pẹlu.",
+          "Mimi jinlẹ, sọ pẹlu ifọkanbalẹ: 'Mo fẹran iyaworan mi, iṣẹ ọna jẹ nipa afihan ara mi', lẹhinna rin kuro.",
+          "Fi oju rẹ pamọ, bẹrẹ si sọkun, ki o si ju iyaworan naa sinu idoti."
+        ],
+        "correctAnswer": "Mimi jinlẹ, sọ pẹlu ifọkanbalẹ: 'Mo fẹran iyaworan mi, iṣẹ ọna jẹ nipa afihan ara mi', lẹhinna rin kuro.",
+        "feedbackTip": "Iwa ti o dara! Ṣiṣakoso ibinu rẹ ati siseto awọn aala tọwọtọwọ n jẹ ki o jẹ alakoso awọn ikunsinu rẹ."
+      }
+    }
+  },
+  {
+    "id": "eq_2",
+    "skill": "emotionalIQ",
+    "difficulty": 2,
+    "responseType": "scenario",
+    "translations": {
+      "en": {
+        "prompt": "You are feeling extremely angry and frustrated because you failed a school math test. What is a healthy self-awareness technique to calm down?",
+        "options": [
+          "Punch the wall or kick a table to release the energy.",
+          "Bottle up the feeling, pretend you do not care, and go to sleep.",
+          "Acknowledge the feeling ('I feel angry because I wanted a better grade'), take 5 deep slow breaths, and plan to ask for help on difficult topics."
+        ],
+        "correctAnswer": "Acknowledge the feeling ('I feel angry because I wanted a better grade'), take 5 deep slow breaths, and plan to ask for help on difficult topics.",
+        "feedbackTip": "Superb emotional mastery! Identifying the emotion, breathing, and formulating an action plan turns frustration into growth."
+      },
+      "pcm": {
+        "prompt": "You dey vex well-well because you fail math test for school. Wetin be the healthy way to calm down?",
+        "options": [
+          "Blow wall or kick table make the vex comout.",
+          "Lock the vex inside your chest, pretend say you no care, go sleep.",
+          "Tell yourself the truth ('I dey vex because I want pass'), take 5 deep breath slow-slow, then plan to ask for help on math."
+        ],
+        "correctAnswer": "Tell yourself the truth ('I dey vex because I want pass'), take 5 deep breath slow-slow, then plan to ask for help on math.",
+        "feedbackTip": "Very good! To call vex by name ('I dey vex') and breathe na the best medicine to clear head."
+      },
+      "yo": {
+        "prompt": "O n rilara ibinu pupọ nitori o kuna idanwo mathimatiki ile-iwe kan. Kini ilana ti o dara lati tun ara rẹ ṣe?",
+        "options": [
+          "Kan ogiri tabi tapa tabili lati tu ibinu naa jade.",
+          "Pa ẹdun naa mọ ninu àyà, ṣe bi ẹni pe ko kan ọ, ki o si lọ sun.",
+          "Gba ẹdun naa gbọ́ ('Mo binu nitori mo fẹ ami ti o dara julọ'), gba ẹmi jinlẹ marun, ki o si gbero lati beere fun iranlọwọ lori awọn koko ọrọ to nira."
+        ],
+        "correctAnswer": "Gba ẹdun naa gbọ́ ('Mo binu nitori mo fẹ ami ti o dara julọ'), gba ẹmi jinlẹ marun, ki o si gbero lati beere fun iranlọwọ lori awọn koko ọrọ to nira.",
+        "feedbackTip": "O tayọ! Lilo akiyesi ẹdun, mimi, ati ṣiṣero iṣẹ ṣiṣe n sọ ibanujẹ di idagbasoke."
+      }
+    }
+  },
+  {
+    "id": "eq_3",
+    "skill": "emotionalIQ",
+    "difficulty": 3,
+    "responseType": "scenario",
+    "translations": {
+      "en": {
+        "prompt": "Your classmate accidentally trips, falls, and spills their warm rice and stew all over the classroom floor. Other students start laughing. What do you do?",
+        "options": [
+          "Laugh along with the class because it looks funny.",
+          "Ignore them and continue reading your book.",
+          "Walk over, check if they are hurt, help them stand up, and help clean up the spilled lunch."
+        ],
+        "correctAnswer": "Walk over, check if they are hurt, help them stand up, and help clean up the spilled lunch.",
+        "feedbackTip": "You are a light! Empathy is standing up for others in embarrassing situations. That is leadership."
+      },
+      "pcm": {
+        "prompt": "Your classmate fall by mistake, his rice and stew pour for ground. Other children start to laugh. Wetin you go do?",
+        "options": [
+          "Laugh follow dem because e funny.",
+          "Pretend say you no see am, continue to read.",
+          "Waka go help am stand up, ask if he wound, and help am pack the food for ground."
+        ],
+        "correctAnswer": "Waka go help am stand up, ask if he wound, and help am pack the food for ground.",
+        "feedbackTip": "You carry light! Empathy na when you help person wey fall or dey shame. Correct character!"
+      },
+      "yo": {
+        "prompt": "Ọmọ ile-iwe rẹ ti kọsẹ, o ṣubu, o si da iresi ati ọbẹ rẹ si gbogbo ilẹ yara ikawe. Awọn akẹkọọ miiran bẹrẹ si rẹrin. Kini iwọ yoo ṣe?",
+        "options": [
+          "Rẹrin pẹlu wọn nitori o dabi ẹni pe o dun.",
+          "Foju fo wọn ki o si tẹsiwaju lati ka iwe rẹ.",
+          "Rin lọ sibẹ, ṣayẹwo boya wọn farapa, ran wọn lọwọ lati dide, ati iranlọwọ lati nu ounjẹ ti o da."
+        ],
+        "correctAnswer": "Rin lọ sibẹ, ṣayẹwo boya wọn farapa, ran wọn lọwọ lati dide, ati iranlọwọ lati nu ounjẹ ti o da.",
+        "feedbackTip": "Iwọ jẹ imọlẹ! Aanu (empathy) ni gbigbe fun awọn miiran ni awọn ipo tiju. Iyẹn jẹ adari gidi."
+      }
+    }
+  },
+  {
+    "id": "eq_4",
+    "skill": "emotionalIQ",
+    "difficulty": 1,
+    "responseType": "scenario",
+    "translations": {
+      "en": {
+        "prompt": "Your younger brother accidentally steps on and breaks your favorite plastic ruler. What is the most mature response?",
+        "options": [
+          "Break his toy in return to teach him a lesson.",
+          "Recognize it was an accident, explain that you are sad it broke, and discuss storing toys in safer places.",
+          "Shout at him and call him names until he cries."
+        ],
+        "correctAnswer": "Recognize it was an accident, explain that you are sad it broke, and discuss storing toys in safer places.",
+        "feedbackTip": "Great empathy and logic! Forgiving accidents avoids useless conflicts and protects family relationships."
+      },
+      "pcm": {
+        "prompt": "Your small brother match break your ruler by mistake. How you go react?",
+        "options": [
+          "Break his own toy back make he know how e dey pain.",
+          "Know say na mistake, tell am say you sad but make una arrange things for safe place next time.",
+          "Shout for his head well-well make he cry."
+        ],
+        "correctAnswer": "Know say na mistake, tell am say you sad but make una arrange things for safe place next time.",
+        "feedbackTip": "Correct! Conflict no good for family. To forgive and manage your ruler is mature."
+      },
+      "yo": {
+        "prompt": "Àbúrò rẹ tẹ́ olùkọ̀wé rẹ (ruler) ṣiṣu ti o fẹran julọ o si fọ́ ọ nipasẹ ijamba. Kini iṣesi ti o tọ́ julọ?",
+        "options": [
+          "Fọ́ ohun-iṣere tirẹ naa lati kọ ọ ni ẹkọ.",
+          "Gba pe ijamba ni, ṣalaye pe inu rẹ bajẹ pe o fọ́, ki o si jiroro lori titoju ohun isere si aye to ni aabo.",
+          "Kigbe mọ ọn ki o si pe ni awọn orukọ buburu titi yoo fi sọkun."
+        ],
+        "correctAnswer": "Gba pe ijamba ni, ṣalaye pe inu rẹ bajẹ pe o fọ́, ki o si jiroro lori titoju ohun isere si aye to ni aabo.",
+        "feedbackTip": "Aanu ati ọgbọn nla! Idariji ijamba n yago fun ija ati aabo ajọṣepọ idile."
+      }
+    }
+  },
+  {
+    "id": "eq_5",
+    "skill": "emotionalIQ",
+    "difficulty": 2,
+    "responseType": "text",
+    "translations": {
+      "en": {
+        "prompt": "You borrowed a friend's pen and accidentally lost it. Write down a sincere apology statement that shows responsibility and offers a solution.",
+        "feedbackTip": "EQ Tip: A good apology admits the mistake, expresses sincere regret, and outlines a plan to replace the item or make amends."
+      },
+      "pcm": {
+        "prompt": "You borrow pen from your friend then by mistake you loss am. Write down how you go take beg am wey go show say you be responsible person and how you go pay back.",
+        "feedbackTip": "EQ Tip: Good beg na when you gree say you lose am, say sorry, and promise to buy another pen replace am."
+      },
+      "yo": {
+        "prompt": "O ya peni lọwọ ọrẹ rẹ ti o si sọnu nipasẹ ijamba. Kọ alaye aforiji tootọ ti o fihan pe o jẹ iduroṣinṣin ti o si n funni ni ojutu.",
+        "feedbackTip": "EQ Tip: Aforiji to dara n gba aṣiṣe gbọ́, n ṣalaye ibanujẹ tootọ, ati eto lati rọpo nkan naa tabi san ẹsan."
+      }
+    }
+  },
+  {
+    "id": "eq_6",
+    "skill": "emotionalIQ",
+    "difficulty": 3,
+    "responseType": "scenario",
+    "translations": {
+      "en": {
+        "prompt": "Your mother asks you and your siblings to sweep, wash dishes, and fetch water. Your sibling sits down and claims they are too tired, leaving all the work to you. What is the best collaborative resolution?",
+        "options": [
+          "Do all the work yourself while grumbling and planning to report them to your parents later.",
+          "Refuse to work too, so the house remains dirty, resulting in everyone getting scolded.",
+          "Approach your sibling and say: 'If we split the tasks, we can finish twice as fast and both go play. You sweep, while I wash the dishes. Deal?'"
+        ],
+        "correctAnswer": "Approach your sibling and say: 'If we split the tasks, we can finish twice as fast and both go play. You sweep, while I wash the dishes. Deal?'",
+        "feedbackTip": "Excellent collaborative problem solving! Active negotiation reduces stress and builds a team-first spirit."
+      },
+      "pcm": {
+        "prompt": "Mama ask you and your brother to clean house. Your brother sit down say he tire, leave all work for you. Wetin you go do?",
+        "options": [
+          "Do all the work, dey block face, then report am to mama later.",
+          "Refuse to work too make place dirty, make all of una chop cleaning/shouting.",
+          "Tell your brother: 'If we share work, we go finish quick go play ball. Sweep the room, make I wash plate. Deal?'"
+        ],
+        "correctAnswer": "Tell your brother: 'If we share work, we go finish quick go play ball. Sweep the room, make I wash plate. Deal?'",
+        "feedbackTip": "Champion negotiation! To share work make everybody happy, and work go finish fast-fast."
+      },
+      "yo": {
+        "prompt": "Mama rẹ ni ki iwọ ati awọn arakunrin rẹ gbale, fo awopọ, ati pọn omi. Àbúrò rẹ joko o si sọ pe oun rẹwẹsi, o fi gbogbo iṣẹ silẹ fun ọ. Kini ipinnu to dara julọ?",
+        "options": [
+          "Ṣe gbogbo iṣẹ naa funrararẹ lakoko ti o n kùn ti o si n gbero lati jabo wọn fun awọn obi rẹ nigbamii.",
+          "Kọ lati ṣiṣẹ pẹlu, nitorinaa ile naa yoo wa ni idoti, eyiti yoo fa ki a ba gbogbo eniyan wi.",
+          "Sún mọ́ àbúrò rẹ ki o sọ pe: 'Ti a ba pin awọn iṣẹ naa, a le pari ni ilopo meji ti o si yara ju, gbogbo wa yoo si lọ ṣere. Iwọ gbale, emi yoo si fo awopọ. Ṣe o gba?'"
+        ],
+        "correctAnswer": "Sún mọ́ àbúrò rẹ ki o sọ pe: 'Ti a ba pin awọn iṣẹ naa, a le pari ni ilopo meji ti o si yara ju, gbogbo wa yoo si lọ ṣere. Iwọ gbale, emi yoo si fo awopọ. Ṣe o gba?'",
+        "feedbackTip": "Olori atunṣe to dara! Dunaadura ipin iṣẹ n dinku aapọn ti o si n kọ ẹmi ifowosowopo idile gidi."
+      }
+    }
+  }
+]

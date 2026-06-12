@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #F59E0B;
+  --color-secondary: #1E293B;
+  --color-accent: #10B981;
+  --color-bg-soft: #FFFDF7;
+  
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Outfit", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-soft);
+    color: var(--color-secondary);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+}
+
+/* Custom UI Micro-animations & utilities */
+
+/* Playful bounce for mascot or flame */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Page fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Soft white background overlay cards (Glassmorphism) */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(245, 158, 11, 0.15);
+}
+
+/* Custom scrollbar to keep layout clean on mobile */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #F59E0B;
+  border-radius: 9999px;
+}
+
+/* Active tap styling for mobile feedback */
+.active-tap:active {
+  transform: scale(0.96);
+  transition: transform 0.1s ease;
+}
+
+/* Custom streak fire animation background pulse */
+@keyframes pulse-fire {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.95;
+  }
+}
+
+.animate-pulse-fire {
+  animation: pulse-fire 2s ease-in-out infinite;
+}
+
+@keyframes imole-loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes imole-loader-breathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.92;
+  }
+}
+
+@keyframes imole-loader-shimmer {
+  0% {
+    transform: translateX(-90%);
+  }
+  100% {
+    transform: translateX(230%);
+  }
+}
+
+.imole-loader-ring {
+  animation: imole-loader-spin 1.15s linear infinite;
+}
+
+.imole-loader-logo {
+  animation: imole-loader-breathe 1.8s ease-in-out infinite;
+}
+
+.imole-loader-glow {
+  animation: imole-loader-breathe 1.8s ease-in-out infinite;
+}
+
+.imole-loader-bar {
+  animation: imole-loader-shimmer 1.25s ease-in-out infinite;
+}
