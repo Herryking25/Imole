@@ -1,8 +1,29 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { Check, X, Award, Flame, ArrowRight } from 'lucide-react'
-import { useLanguage } from '../App'
-import ImoleMascot from '../components/ImoleMascot'
+import { Flame, Sparkles, XCircle } from 'lucide-react'
+import { useLanguage, useProfile } from '../App'
+import { StorageService } from '../services/storage'
+
+interface ChallengeTranslation {
+  prompt: string
+  options?: string[]
+  correctAnswer?: string
+  feedbackTip: string
+}
+
+interface Challenge {
+  id: string
+  skill: 'mentalMath' | 'speaking' | 'finance' | 'creativity' | 'emotionalIQ'
+  difficulty: number
+  responseType: 'text' | 'multipleChoice' | 'scenario'
+  videoUrl?: string
+  videoTitle?: string
+  translations: {
+    en: ChallengeTranslation
+    pcm: ChallengeTranslation
+    yo: ChallengeTranslation
+  }
+}
 
 interface FeedbackState {
   isCorrect: boolean
@@ -12,16 +33,17 @@ interface FeedbackState {
   correctAnswer: string | null
   responseType: 'text' | 'multipleChoice' | 'scenario'
   skill: string
+  challenge?: Challenge
 }
 
 export default function FeedbackScreen() {
   const { t } = useLanguage()
+  const { profile } = useProfile()
   const location = useLocation()
   const navigate = useNavigate()
 
   const state = location.state as FeedbackState | undefined
 
-  // Redirect if accessed directly
   useEffect(() => {
     if (!state) {
       navigate('/dashboard', { replace: true })
@@ -30,142 +52,124 @@ export default function FeedbackScreen() {
 
   if (!state) return null
 
-  const { isCorrect, score, xpEarned, feedbackTip, correctAnswer, responseType, skill } = state
+  const { isCorrect, xpEarned, feedbackTip, challenge } = state
+  const streak = StorageService.getStreak()
+  const streakCount = streak.current || 0
+  const isMilestone = isCorrect && streakCount > 0 && streakCount % 7 === 0
+  const displayPoints = isCorrect ? xpEarned : 0
 
-  // Confetti particles generator
-  const [particles, setParticles] = useState<{ id: number; color: string; left: number; size: number; delay: number; duration: number }[]>([])
+  const title = isCorrect
+    ? isMilestone
+      ? 'You are on fire!'
+      : `Well done,\n${profile?.name || 'Imole Star'}!`
+    : t('incorrect_title')
 
-  useEffect(() => {
-    if (isCorrect) {
-      const colors = ['#F59E0B', '#10B981', '#3B82F6', '#EC4899', '#EF4444', '#FBBF24']
-      const items = Array.from({ length: 35 }).map((_, i) => ({
-        id: i,
-        color: colors[Math.floor(Math.random() * colors.length)],
-        left: Math.random() * 100, // percentage width
-        size: Math.random() * 8 + 6, // px width/height
-        delay: Math.random() * 1.5, // seconds delay
-        duration: Math.random() * 2 + 2 // seconds duration
-      }))
-      setParticles(items)
+  const lesson = isCorrect
+    ? feedbackTip
+    : feedbackTip || t('incorrect_subtitle')
+
+  const handleSecondaryAction = () => {
+    if (isCorrect || !challenge) {
+      navigate('/dashboard')
+      return
     }
-  }, [isCorrect])
+    navigate('/challenge', { state: { challenge }, replace: true })
+  }
 
   return (
-    <div className="flex-grow flex flex-col justify-between select-none relative min-h-screen px-6 py-10 overflow-hidden">
-      
-      {/* Confetti Background rendering (Only if correct) */}
-      {isCorrect && (
-        <div className="absolute inset-0 pointer-events-none z-0">
-          {particles.map((p) => (
-            <div
-              key={p.id}
-              className="absolute rounded-sm opacity-80"
-              style={{
-                backgroundColor: p.color,
-                width: `${p.size}px`,
-                height: `${p.size}px`,
-                left: `${p.left}%`,
-                top: `-20px`,
-                transform: `rotate(${Math.random() * 360}deg)`,
-                animation: `fall ${p.duration}s linear ${p.delay}s infinite`,
-              }}
-            />
-          ))}
-          {/* Confetti Animation Style */}
-          <style>{`
-            @keyframes fall {
-              0% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 1;
-              }
-              100% {
-                transform: translateY(105vh) rotate(360deg);
-                opacity: 0;
-              }
-            }
-          `}</style>
-        </div>
-      )}
-
-      {/* Main Feedback State */}
-      <div className="flex-grow flex flex-col items-center justify-center gap-6 z-10 max-w-sm mx-auto w-full animate-fade-in">
-        
-        {/* Mascot representation */}
-        <ImoleMascot expression={isCorrect ? 'excited' : 'sad'} size={120} />
-
-        {/* Evaluation Banner */}
-        <div className="text-center">
-          {isCorrect ? (
-            <>
-              {/* Correct State */}
-              <div className="inline-flex items-center justify-center w-14 h-14 bg-emerald-500 rounded-full text-white mb-3 shadow-[0_4px_12px_rgba(16,185,129,0.3)]">
-                <Check className="w-8 h-8 stroke-[3]" />
+    <div className="min-h-dvh w-full bg-[#F8EFD9] px-5 py-10 text-[#171717]">
+      <div className="mx-auto flex min-h-[calc(100dvh-5rem)] w-full max-w-sm flex-col">
+        <section className="flex flex-1 flex-col items-center pt-8 text-center">
+          <div className="flex h-[116px] w-[116px] items-center justify-center rounded-full bg-[#F9C94A] text-slate-950 shadow-sm">
+            {isMilestone ? (
+              <div className="flex flex-col items-center leading-none">
+                <span className="font-display text-6xl font-black tracking-normal">{streakCount}</span>
+                <span className="mt-1 text-xs font-black uppercase">Days</span>
               </div>
-              <h2 className="text-3xl font-black text-slate-800 tracking-tight font-display">
-                {t('congrats')}
-              </h2>
-              <p className="text-sm text-slate-500 font-semibold mt-1">
-                {t('keep_it_up')}
-              </p>
-            </>
-          ) : (
-            <>
-              {/* Incorrect State */}
-              <div className="inline-flex items-center justify-center w-14 h-14 bg-orange-500 rounded-full text-white mb-3 shadow-[0_4px_12px_rgba(245,158,11,0.3)]">
-                <X className="w-8 h-8 stroke-[3]" />
-              </div>
-              <h2 className="text-3xl font-black text-slate-800 tracking-tight font-display">
-                {t('incorrect_title')}
-              </h2>
-              <p className="text-sm text-slate-500 font-semibold mt-1">
-                {t('incorrect_subtitle')}
-              </p>
-            </>
-          )}
-        </div>
-
-        {/* Score & XP Cards */}
-        <div className="flex gap-4 w-full mt-2">
-          {/* XP Gained card */}
-          <div className="bg-white border border-slate-100 rounded-3xl p-4 flex-1 flex flex-col items-center shadow-sm">
-            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest font-sans">Points</span>
-            <span className="text-lg font-extrabold text-amber-500 font-display mt-0.5">+{xpEarned} XP</span>
+            ) : isCorrect ? (
+              <Sparkles className="h-14 w-14 stroke-[2.5]" />
+            ) : (
+              <XCircle className="h-16 w-16 stroke-[2.2]" />
+            )}
           </div>
 
-          {/* Correct answer check if wrong */}
-          {!isCorrect && correctAnswer && (
-            <div className="bg-white border border-slate-100 rounded-3xl p-4 flex-1 flex flex-col items-center shadow-sm text-center">
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest font-sans">Correct Answer</span>
-              <span className="text-xs font-bold text-emerald-600 font-sans mt-1 line-clamp-2">
-                {correctAnswer}
-              </span>
+          {isMilestone && (
+            <div className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-[#D99A1B] px-4 py-2 text-sm font-bold text-slate-950">
+              <Flame className="h-4 w-4 fill-orange-500 text-orange-500" />
+              <span>{streakCount}- day Milestone</span>
             </div>
           )}
-        </div>
 
-        {/* Expert Tip speech bubble card */}
-        <div className="w-full bg-[#FFFDF7] border-2 border-[#F59E0B]/20 rounded-3xl p-5 shadow-sm mt-2">
-          <h4 className="text-xs font-black text-amber-600 font-display uppercase tracking-widest mb-1.5 flex items-center gap-1.5">
-            💡 {t('feedback_title')}
-          </h4>
-          <p className="text-sm font-bold text-slate-700 leading-relaxed font-sans">
-            {feedbackTip}
+          <h1 className="mt-6 whitespace-pre-line font-display text-[32px] font-black leading-tight tracking-normal">
+            {title}
+          </h1>
+
+          <p className="mt-5 text-base font-semibold text-[#B57700]">
+            + {displayPoints} points earned
           </p>
-        </div>
 
+          {!isMilestone && (
+            <div className="mt-5 inline-flex items-center gap-1.5 rounded-full bg-[#E7DDC9] px-4 py-2 text-sm font-semibold text-[#A86F00]">
+              <Flame className="h-4 w-4 fill-orange-500 text-orange-500" />
+              <span>{streakCount}- day Streak</span>
+            </div>
+          )}
+
+          <div className="mt-16 w-full rounded-2xl bg-[#FFF4BE] px-4 py-6 text-left shadow-sm">
+            <h2 className="text-xs font-black uppercase tracking-normal text-slate-400">
+              Today's Lesson
+            </h2>
+            <p className="mt-4 text-base font-medium leading-relaxed text-slate-700">
+              {lesson}
+            </p>
+          </div>
+
+          {/* YouTube Watch Again Card */}
+          {challenge?.videoUrl && (
+            <a
+              href={challenge.videoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 w-full flex items-center gap-3 bg-white border border-slate-200 rounded-2xl px-4 py-3 shadow-sm hover:bg-slate-50 transition active-tap text-left"
+            >
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-red-600">
+                <svg viewBox="0 0 24 24" className="h-4 w-4 fill-white" aria-hidden="true">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+              <div className="flex min-w-0 flex-col">
+                <span className="text-[10px] font-extrabold uppercase tracking-widest text-slate-400">
+                  Watch the lesson video
+                </span>
+                <span className="truncate text-xs font-bold text-slate-600">
+                  {challenge.videoTitle}
+                </span>
+              </div>
+              <svg viewBox="0 0 24 24" className="ml-auto h-4 w-4 shrink-0 fill-none stroke-slate-300 stroke-2" aria-hidden="true">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </a>
+          )}
+        </section>
+
+        <section className="flex w-full flex-col gap-4 pb-[calc(1rem+env(safe-area-inset-bottom))] pt-8">
+          <button
+            type="button"
+            onClick={() => navigate('/progress')}
+            className="h-11 w-full rounded-full bg-[#F59E0B] text-base font-black text-black shadow-sm transition hover:bg-[#E89208] active-tap"
+          >
+            See my progress
+          </button>
+
+          <button
+            type="button"
+            onClick={handleSecondaryAction}
+            className="h-11 w-full rounded-full bg-white text-base font-black text-slate-900 shadow-sm transition hover:bg-slate-50 active-tap"
+          >
+            {isCorrect ? 'Back to Home' : 'Try Again'}
+          </button>
+        </section>
       </div>
-
-      {/* Action button */}
-      <div className="w-full max-w-sm mx-auto z-10 mt-6">
-        <button
-          onClick={() => navigate('/dashboard')}
-          className="w-full bg-slate-800 hover:bg-slate-900 text-white font-display text-base font-extrabold py-4 px-6 rounded-2xl shadow-md transition duration-150 flex items-center justify-center gap-2 active-tap"
-        >
-          <span>{t('back_to_dashboard')}</span>
-          <ArrowRight className="w-4 h-4 text-amber-400" />
-        </button>
-      </div>
-
     </div>
   )
 }

@@ -17,6 +17,8 @@ interface Challenge {
   skill: 'mentalMath' | 'speaking' | 'finance' | 'creativity' | 'emotionalIQ'
   difficulty: number
   responseType: 'text' | 'multipleChoice' | 'scenario'
+  videoUrl?: string
+  videoTitle?: string
   translations: {
     en: ChallengeTranslation
     pcm: ChallengeTranslation
@@ -30,10 +32,8 @@ export default function ChallengeScreen() {
   const location = useLocation()
   const navigate = useNavigate()
 
-  // Retrieve challenge from navigation state
   const challenge = location.state?.challenge as Challenge | undefined
 
-  // Redirect if no challenge is loaded
   useEffect(() => {
     if (!challenge) {
       navigate('/dashboard', { replace: true })
@@ -41,23 +41,19 @@ export default function ChallengeScreen() {
   }, [challenge, navigate])
 
   if (!challenge) return null
+  
 
-  // Language state for this specific challenge (starts at user's profile preference)
   const [challengeLang, setChallengeLang] = useState<'en' | 'pcm' | 'yo'>(profileLang)
   const [showLangDropdown, setShowLangDropdown] = useState(false)
-
-  // Form input states
   const [textAnswer, setTextAnswer] = useState('')
   const [selectedOption, setSelectedOption] = useState<string | null>(null)
-  
-  // Get active translations based on selected language
+
   const activeTranslation = challenge.translations[challengeLang] || challenge.translations.en
   const { prompt, options, correctAnswer, feedbackTip } = activeTranslation
 
   const handleLangSelect = (lang: 'en' | 'pcm' | 'yo') => {
     setChallengeLang(lang)
     setShowLangDropdown(false)
-    // Clear answer selections if switching language to avoid option mismatches
     setSelectedOption(null)
   }
 
@@ -71,40 +67,31 @@ export default function ChallengeScreen() {
   const handleSubmit = () => {
     if (isSubmitDisabled()) return
 
-    // Calculate score
     let score = 0
     let isCorrect = false
 
     if (challenge.responseType === 'text') {
-      // Open-ended answers are awarded full score for participation/effort
       score = 100
       isCorrect = true
     } else {
-      // Multiple choice or scenario matches correct answer
       isCorrect = selectedOption === correctAnswer
       score = isCorrect ? 100 : 0
     }
 
-    const xpEarned = isCorrect ? 100 : 50 // 100 XP for correct/effort, 50 XP participation
+    const xpEarned = isCorrect ? 100 : 50
 
-    // Save session log
     const session: Session = {
       date: getLocalDateString(),
       skillArea: challenge.skill,
       challengeId: challenge.id,
-      response: challenge.responseType === 'text' ? textAnswer : (selectedOption || ""),
+      response: challenge.responseType === 'text' ? textAnswer : (selectedOption || ''),
       score: score,
       completedAt: new Date().toISOString()
     }
     StorageService.saveSession(session)
-
-    // Update streak tracking
     StorageService.updateStreakOnCompletion()
-
-    // Add running score XP
     StorageService.addScore(challenge.skill, score, xpEarned)
 
-    // Route to feedback screen
     navigate('/feedback', {
       state: {
         isCorrect,
@@ -113,7 +100,8 @@ export default function ChallengeScreen() {
         feedbackTip,
         correctAnswer: challenge.responseType !== 'text' ? correctAnswer : null,
         responseType: challenge.responseType,
-        skill: challenge.skill
+        skill: challenge.skill,
+        challenge
       },
       replace: true
     })
@@ -131,10 +119,9 @@ export default function ChallengeScreen() {
 
   return (
     <div className="flex-grow flex flex-col justify-between select-none min-h-screen px-4 py-6">
-      
+
       {/* 1. Minimal Header */}
       <div className="flex items-center justify-between w-full">
-        {/* Back Button */}
         <button
           onClick={() => navigate('/dashboard')}
           className="p-2.5 rounded-2xl border border-slate-100 hover:bg-slate-50 transition active-tap bg-white shadow-sm"
@@ -142,12 +129,10 @@ export default function ChallengeScreen() {
           <ChevronLeft className="w-5 h-5 text-slate-600" />
         </button>
 
-        {/* Progress Bar (Duolingo Style) */}
         <div className="flex-grow mx-4 bg-slate-100 h-3 rounded-full overflow-hidden relative shadow-inner">
           <div className="bg-amber-500 h-full rounded-full transition-all duration-300 w-1/2" />
         </div>
 
-        {/* Challenge Language Selector */}
         <div className="relative">
           <button
             onClick={() => setShowLangDropdown(!showLangDropdown)}
@@ -187,7 +172,7 @@ export default function ChallengeScreen() {
 
       {/* 2. Challenge Body */}
       <div className="flex-grow flex flex-col justify-center my-6 max-w-sm mx-auto w-full gap-5">
-        
+
         {/* Skill tag & Mascot header */}
         <div className="flex items-center gap-4">
           <ImoleMascot expression="thinking" size={70} className="shrink-0" />
@@ -206,9 +191,34 @@ export default function ChallengeScreen() {
           {prompt}
         </h3>
 
+        {/* YouTube Learn More Card */}
+        {challenge.videoUrl && (
+  <button
+    type="button"
+    onClick={() => window.open(challenge.videoUrl, '_blank', 'noopener,noreferrer')}
+    className="flex items-center gap-3 bg-white border border-slate-200 rounded-2xl px-4 py-3 shadow-sm hover:bg-slate-50 transition active-tap w-full text-left"
+  >
+    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-red-600">
+      <svg viewBox="0 0 24 24" className="h-4 w-4 fill-white" aria-hidden="true">
+        <path d="M8 5v14l11-7z" />
+      </svg>
+    </div>
+    <div className="flex min-w-0 flex-col">
+      <span className="text-[10px] font-extrabold uppercase tracking-widest text-slate-400">
+        Watch to learn more
+      </span>
+      <span className="truncate text-xs font-bold text-slate-600">
+        {challenge.videoTitle ?? 'Watch video'}
+      </span>
+    </div>
+    <svg viewBox="0 0 24 24" className="ml-auto h-4 w-4 shrink-0 fill-none stroke-slate-300 stroke-2" aria-hidden="true">
+      <path d="M9 18l6-6-6-6" />
+    </svg>
+  </button>
+)}
         {/* Answer Input Area */}
         <div className="w-full mt-2">
-          
+
           {challenge.responseType === 'text' && (
             <textarea
               value={textAnswer}
@@ -224,7 +234,7 @@ export default function ChallengeScreen() {
               <span className="text-xs font-bold text-slate-400 uppercase tracking-widest px-1 font-sans">
                 {t('select_option')}
               </span>
-              
+
               {options.map((option, idx) => (
                 <button
                   key={idx}
@@ -247,7 +257,6 @@ export default function ChallengeScreen() {
           )}
 
         </div>
-
       </div>
 
       {/* 3. Bottom Action Button */}

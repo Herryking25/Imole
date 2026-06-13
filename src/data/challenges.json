@@ -4,6 +4,8 @@
     "skill": "mentalMath",
     "difficulty": 1,
     "responseType": "multipleChoice",
+    "videoUrl": "https://www.youtube.com/watch?v=Ji3MR2-AmVk",
+    "videoTitle": "Mental Math Tricks for Kids – Addition & Subtraction",
     "translations": {
       "en": {
         "prompt": "You buy Zobo drink for ₦1,200 and Sausage Roll for ₦800. You give the vendor ₦2,000. How much change will you get back?",
@@ -30,6 +32,8 @@
     "skill": "mentalMath",
     "difficulty": 2,
     "responseType": "multipleChoice",
+    "videoUrl": "https://www.youtube.com/watch?v=82Zh3PTm4yI",
+    "videoTitle": "Common Number Patterns | Maths For Kids",
     "translations": {
       "en": {
         "prompt": "Identify the pattern of the Danfo bus times arriving at the bus stop: 8:00 AM, 8:15 AM, 8:30 AM, ... What time is the next bus expected?",
@@ -56,6 +60,8 @@
     "skill": "mentalMath",
     "difficulty": 3,
     "responseType": "multipleChoice",
+    "videoUrl": "https://www.youtube.com/watch?v=lVAjqxAmUGU",
+    "videoTitle": "Elapsed Time – Finding Start, End and Total Time",
     "translations": {
       "en": {
         "prompt": "You are traveling from Ikeja to Lekki. The trip takes 45 minutes normally, but Lagos traffic adds an extra 30 minutes. If you leave at 2:00 PM, what time will you arrive?",
@@ -82,6 +88,8 @@
     "skill": "mentalMath",
     "difficulty": 1,
     "responseType": "multipleChoice",
+    "videoUrl": "https://www.youtube.com/watch?v=jk_b6kdDMms",
+    "videoTitle": "Division as Sharing Equally and Grouping",
     "translations": {
       "en": {
         "prompt": "You have a bag containing 36 pieces of chin-chin. You want to share them equally among yourself and 3 friends. How many pieces does each person get?",
@@ -108,6 +116,8 @@
     "skill": "mentalMath",
     "difficulty": 2,
     "responseType": "multipleChoice",
+    "videoUrl": "https://www.youtube.com/watch?v=bx4Z8ZBuXGo",
+    "videoTitle": "Triangular Numbers | Patterns | Khan Academy",
     "translations": {
       "en": {
         "prompt": "A market seller stacks oranges in a pyramid: 1 orange at the top, 3 in the middle row, and 6 in the bottom row. If she wants to add a fourth row underneath, following the pattern of triangular numbers (1, 3, 6, ...), how many oranges will be in the new bottom row?",
@@ -134,6 +144,8 @@
     "skill": "mentalMath",
     "difficulty": 3,
     "responseType": "multipleChoice",
+    "videoUrl": "https://www.youtube.com/watch?v=iWIJFa1DMF8",
+    "videoTitle": "Logic Puzzles – Logical Reasoning & Process of Elimination",
     "translations": {
       "en": {
         "prompt": "Tobi, Chidi, and Amina each bought a fruit. The fruits are Mango, Banana, and Pawpaw. Tobi did not buy Mango. Chidi bought Pawpaw. What fruit did Tobi buy?",
@@ -160,6 +172,8 @@
     "skill": "speaking",
     "difficulty": 1,
     "responseType": "text",
+    "videoUrl": "https://www.youtube.com/watch?v=D-J-eF7r3kU",
+    "videoTitle": "Public Speaking Class for Kids – Tips & Confidence",
     "translations": {
       "en": {
         "prompt": "Write down a short speech (2-3 sentences) to convince your parents to let you start a small home garden to grow vegetables.",
@@ -180,6 +194,8 @@
     "skill": "speaking",
     "difficulty": 2,
     "responseType": "text",
+    "videoUrl": "https://www.youtube.com/watch?v=emwIuXcJXhk",
+    "videoTitle": "Teaching Kids the Art of Persuasion",
     "translations": {
       "en": {
         "prompt": "Your friend wants to skip Saturday environmental sanitation to play football. How would you respectably convince them to clean up first?",
@@ -200,6 +216,8 @@
     "skill": "speaking",
     "difficulty": 3,
     "responseType": "text",
+    "videoUrl": "https://www.youtube.com/watch?v=hWKgNa2vBj0",
+    "videoTitle": "Public Speaking Class for Kids – Episode 1",
     "translations": {
       "en": {
         "prompt": "Imagine you are standing before your school Headteacher. Pitch a new project: 'Recycling plastic bottles in school.' What are your main points?",
@@ -220,6 +238,8 @@
     "skill": "speaking",
     "difficulty": 1,
     "responseType": "text",
+    "videoUrl": "https://www.youtube.com/watch?v=o_9yPzAW6yc",
+    "videoTitle": "Everyday Conflict Resolution Skills for Kids",
     "translations": {
       "en": {
         "prompt": "Your sibling is holding the only mobile phone in the house and refuses to share. Respectfully draft a response to negotiate sharing time.",
@@ -240,6 +260,8 @@
     "skill": "speaking",
     "difficulty": 2,
     "responseType": "text",
+    "videoUrl": "https://www.youtube.com/watch?v=6bbWJKIvl2c",
+    "videoTitle": "Persuasive Writing for Kids – Developing Strong Reasons",
     "translations": {
       "en": {
         "prompt": "A junior student in your school is being discouraged by peers that 'school is a scam' and reading is useless. How would you encourage them to take studies seriously?",
@@ -260,6 +282,8 @@
     "skill": "speaking",
     "difficulty": 3,
     "responseType": "text",
+    "videoUrl": "https://www.youtube.com/watch?v=JaTU4DMVTu4",
+    "videoTitle": "3 Public Speaking Tips for Kids",
     "translations": {
       "en": {
         "prompt": "The local playground is covered in trash. Prepare a 3-sentence speech to convince other children in your neighborhood to join a Saturday clean-up club.",
@@ -280,6 +304,8 @@
     "skill": "finance",
     "difficulty": 1,
     "responseType": "multipleChoice",
+    "videoUrl": "https://www.youtube.com/watch?v=WRcgRimBac8",
+    "videoTitle": "Budgeting for Kids – Understanding Needs, Wants & Saving",
     "translations": {
       "en": {
         "prompt": "Your parents give you ₦5,000 for the week. You spend ₦2,000 on transport and ₦1,500 on textbooks. You want to save the rest. How much can you put in your piggy bank?",
@@ -306,6 +332,8 @@
     "skill": "finance",
     "difficulty": 2,
     "responseType": "scenario",
+    "videoUrl": "https://www.youtube.com/watch?v=XZRfHaZZe8k",
+    "videoTitle": "Needs vs Wants | YNAB Kids",
     "translations": {
       "en": {
         "prompt": "You want a brand new school bag that costs ₦8,000. You have saved ₦4,000 so far. A toy seller offers you a flashy video game controller for ₦3,500. What is the most financially literate action?",
@@ -344,6 +372,8 @@
     "skill": "finance",
     "difficulty": 3,
     "responseType": "multipleChoice",
+    "videoUrl": "https://www.youtube.com/watch?v=OZQQMYfaBT4",
+    "videoTitle": "The 50-30-20 Rule – Budgeting for Needs, Wants and Savings",
     "translations": {
       "en": {
         "prompt": "You want to buy a reading lamp for ₦6,000. If you save ₦1,500 every week from your chores, how many weeks will it take to afford the lamp?",
@@ -370,6 +400,8 @@
     "skill": "finance",
     "difficulty": 1,
     "responseType": "scenario",
+    "videoUrl": "https://www.youtube.com/watch?v=myYnm793xBY",
+    "videoTitle": "Needs and Wants – Making Better Financial Decisions",
     "translations": {
       "en": {
         "prompt": "You get a gift of ₦10,000 from an uncle for your birthday. Identify the choice that shows the smartest budget layout:",
@@ -408,6 +440,8 @@
     "skill": "finance",
     "difficulty": 2,
     "responseType": "multipleChoice",
+    "videoUrl": "https://www.youtube.com/watch?v=J1yiz0aaoz0",
+    "videoTitle": "Understanding Profit and Loss – Grade 5 Math Made Easy",
     "translations": {
       "en": {
         "prompt": "You decide to make and sell Zobo drink at a Saturday market. It costs you ₦3,000 for ingredients (bottles, zobo leaves, sugar). You make 20 bottles and sell them for ₦250 each. What is your profit?",
@@ -434,6 +468,8 @@
     "skill": "finance",
     "difficulty": 3,
     "responseType": "scenario",
+    "videoUrl": "https://www.youtube.com/watch?v=9xJZnoRz8Yk",
+    "videoTitle": "What is an Emergency Fund? A Simple Explanation for Kids",
     "translations": {
       "en": {
         "prompt": "What is the best way to understand an 'Emergency Fund'?",
@@ -472,6 +508,8 @@
     "skill": "creativity",
     "difficulty": 1,
     "responseType": "text",
+    "videoUrl": "https://www.youtube.com/watch?v=Ibq3idYxE4E",
+    "videoTitle": "Critical Thinking Skills for Kids – Solve Problems Creatively",
     "translations": {
       "en": {
         "prompt": "Explain how you can make a toy car using a discarded water bottle, plastic bottle caps, and wooden skewers.",
@@ -492,6 +530,8 @@
     "skill": "creativity",
     "difficulty": 2,
     "responseType": "text",
+    "videoUrl": "https://www.youtube.com/watch?v=UsQ_SHMUmo0",
+    "videoTitle": "7 Activities For Problem Solving – Critical Thinking for Kids",
     "translations": {
       "en": {
         "prompt": "Write down 3 creative ways to use old newspapers around the house instead of throwing them in the trash.",
@@ -512,6 +552,8 @@
     "skill": "creativity",
     "difficulty": 3,
     "responseType": "text",
+    "videoUrl": "https://www.youtube.com/watch?v=dq-E5GIxHYk",
+    "videoTitle": "Introduction to Creative Problem Solving (CPS)",
     "translations": {
       "en": {
         "prompt": "Power goes out (PHCN/NEPA takes light) at night while you are studying. List 3 resourceful ways to light up your desk using items in your room without a rechargeable torch.",
@@ -532,6 +574,8 @@
     "skill": "creativity",
     "difficulty": 1,
     "responseType": "text",
+    "videoUrl": "https://www.youtube.com/watch?v=r103wJ5TTtI",
+    "videoTitle": "Hands-On Activities to Help Kids Practice Problem Solving",
     "translations": {
       "en": {
         "prompt": "Describe a way to make a simple water filter at home using an empty plastic bottle, clean sand, charcoal, and small stones.",
@@ -552,6 +596,8 @@
     "skill": "creativity",
     "difficulty": 2,
     "responseType": "text",
+    "videoUrl": "https://www.youtube.com/watch?v=NRYuueE1tj0",
+    "videoTitle": "Teaching Kids Problem Solving Skills",
     "translations": {
       "en": {
         "prompt": "You share a small bedroom with your siblings and books are scattered everywhere. Suggest a creative shelving solution using cardboard boxes or plastic crates.",
@@ -572,6 +618,8 @@
     "skill": "creativity",
     "difficulty": 3,
     "responseType": "text",
+    "videoUrl": "https://www.youtube.com/watch?v=GpzutFsz2SA",
+    "videoTitle": "Creative Problem Solving & Critical Thinking",
     "translations": {
       "en": {
         "prompt": "Design a fun new board game using only a piece of cardboard, bottle caps as pawns, and seeds from a fruit. What are the basic rules of your game?",
@@ -592,6 +640,8 @@
     "skill": "emotionalIQ",
     "difficulty": 1,
     "responseType": "scenario",
+    "videoUrl": "https://www.youtube.com/watch?v=1jfb0L91I9Y",
+    "videoTitle": "Emotional Awareness – Mindfulness & Building Emotional Intelligence for Kids",
     "translations": {
       "en": {
         "prompt": "A classmate laughs loudly at your school drawing, calling it ugly in front of others. What is the most emotionally intelligent reaction?",
@@ -630,6 +680,8 @@
     "skill": "emotionalIQ",
     "difficulty": 2,
     "responseType": "scenario",
+    "videoUrl": "https://www.youtube.com/watch?v=lMYF_IFcSVM",
+    "videoTitle": "Children Learn How to Control Their Anger – Deep Breathing",
     "translations": {
       "en": {
         "prompt": "You are feeling extremely angry and frustrated because you failed a school math test. What is a healthy self-awareness technique to calm down?",
@@ -668,6 +720,8 @@
     "skill": "emotionalIQ",
     "difficulty": 3,
     "responseType": "scenario",
+    "videoUrl": "https://www.youtube.com/watch?v=27sho6s2eK8",
+    "videoTitle": "What is Empathy? Explaining Empathy to Kids",
     "translations": {
       "en": {
         "prompt": "Your classmate accidentally trips, falls, and spills their warm rice and stew all over the classroom floor. Other students start laughing. What do you do?",
@@ -706,6 +760,8 @@
     "skill": "emotionalIQ",
     "difficulty": 1,
     "responseType": "scenario",
+    "videoUrl": "https://www.youtube.com/watch?v=OS-1NcoVFx8",
+    "videoTitle": "Conflict Resolution for Kids – Understanding and Solving Problems",
     "translations": {
       "en": {
         "prompt": "Your younger brother accidentally steps on and breaks your favorite plastic ruler. What is the most mature response?",
@@ -744,6 +800,8 @@
     "skill": "emotionalIQ",
     "difficulty": 2,
     "responseType": "text",
+    "videoUrl": "https://www.youtube.com/watch?v=jg_Q34kGsKg",
+    "videoTitle": "Conflict Resolution – How to Settle Your Differences Fairly | BrainPOP",
     "translations": {
       "en": {
         "prompt": "You borrowed a friend's pen and accidentally lost it. Write down a sincere apology statement that shows responsibility and offers a solution.",
@@ -764,6 +822,8 @@
     "skill": "emotionalIQ",
     "difficulty": 3,
     "responseType": "scenario",
+    "videoUrl": "https://www.youtube.com/watch?v=aIcxf00bfqY",
+    "videoTitle": "Together We Can – Collaboration and Cooperation | PBS KIDS",
     "translations": {
       "en": {
         "prompt": "Your mother asks you and your siblings to sweep, wash dishes, and fetch water. Your sibling sits down and claims they are too tired, leaving all the work to you. What is the best collaborative resolution?",
