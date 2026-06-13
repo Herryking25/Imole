@@ -172,7 +172,7 @@ export default function App() {
         <HashRouter>
           <div className="min-h-dvh bg-[#FFFDF7] text-[#1E293B] flex justify-center">
             {/* Limit UI bounds on mobile, but expand to support desktop viewports */}
-            <div className="w-full max-w-md md:max-w-5xl bg-[#FFFDF7] shadow-xl relative flex flex-col min-h-dvh border-x border-[#F59E0B]/10 overflow-x-hidden">
+            <div className="w-full max-w-md md:max-w-5xl bg-[#FFFDF7] shadow-xl relative flex flex-col h-dvh border-x border-[#F59E0B]/10 overflow-hidden">
               {isLoading ? <ImoleLoader label={loaderLabel} /> : <MainAppRoutes />}
             </div>
           </div>

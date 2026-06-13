@@ -61,10 +61,10 @@ export default function Layout() {
   }
 
   return (
-    <div className="flex flex-col min-h-dvh relative bg-[#FFFDF7] md:flex-row md:items-stretch">
+    <div className="flex flex-col h-dvh relative bg-[#FFFDF7] md:flex-row md:items-stretch overflow-hidden">
       
       {/* 1. DESKTOP SIDEBAR (Visible on width >= 768px) */}
-      <aside className="hidden md:flex md:flex-col md:justify-between md:w-64 md:border-r md:border-[#F59E0B]/10 md:p-6 md:sticky md:top-0 md:h-screen bg-white">
+      <aside className="hidden md:flex md:flex-col md:justify-between md:w-64 md:border-r md:border-[#F59E0B]/10 md:p-6 bg-white shrink-0">
         
         <div className="flex flex-col gap-8">
           {/* Logo */}
@@ -174,15 +174,15 @@ export default function Layout() {
       </header>
 
       {/* 3. CONTENT AREA (Scrollable pane) */}
-      <div className="flex-grow flex flex-col md:flex-row md:items-stretch min-h-dvh">
+      <div className="flex-grow flex flex-col md:flex-row h-full overflow-hidden">
         
         {/* Main Content Column */}
-        <main className="flex-grow p-4 pb-[calc(6.5rem+env(safe-area-inset-bottom))] md:p-6 md:max-w-2xl">
+        <main className="flex-grow p-4 pb-[calc(6.5rem+env(safe-area-inset-bottom))] md:p-6 md:max-w-2xl overflow-y-auto">
           <Outlet />
         </main>
 
         {/* 4. DESKTOP STATS SIDEBAR (Visible on width >= 1024px or similar, or just desktop side panel) */}
-        <aside className="hidden lg:flex lg:flex-col lg:w-64 lg:border-l lg:border-[#F59E0B]/10 lg:p-6 lg:sticky lg:top-0 lg:h-screen bg-slate-50/30 gap-6">
+        <aside className="hidden lg:flex lg:flex-col lg:w-64 lg:border-l lg:border-[#F59E0B]/10 lg:p-6 bg-slate-50/30 gap-6 shrink-0 overflow-y-auto">
           
           {/* Quick stats title */}
           <div className="flex flex-col gap-1">
